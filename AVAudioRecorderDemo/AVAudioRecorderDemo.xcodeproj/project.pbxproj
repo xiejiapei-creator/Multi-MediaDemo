@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E90335F324F6620300727CCE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E90335F224F6620300727CCE /* AppDelegate.m */; };
+		E90335FE24F6620400727CCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E90335FD24F6620400727CCE /* Assets.xcassets */; };
+		E903360124F6620400727CCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E90335FF24F6620400727CCE /* LaunchScreen.storyboard */; };
+		E903360424F6620400727CCE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E903360324F6620400727CCE /* main.m */; };
+		E903366A24F8B06C00727CCE /* BasicUseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E903366924F8B06C00727CCE /* BasicUseViewController.m */; };
+		E903366E24F8B0F900727CCE /* ToolKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E903366D24F8B0F900727CCE /* ToolKitViewController.m */; };
+		E903367224F8D03300727CCE /* AudioTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E903367124F8D03300727CCE /* AudioTool.m */; };
+		E903367524F8DA2800727CCE /* AudioFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E903367424F8DA2800727CCE /* AudioFileTool.m */; };
+		E903367924F8FF2100727CCE /* AudioPlayerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E903367824F8FF2100727CCE /* AudioPlayerTool.m */; };
+		E903367C24F9042F00727CCE /* AudioFilePathTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E903367B24F9042F00727CCE /* AudioFilePathTool.m */; };
+		E903368224F908C000727CCE /* LameTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E903368124F908C000727CCE /* LameTool.m */; };
+		E92C1A4924FD043C00417EE7 /* SoundEffectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C1A4824FD043C00417EE7 /* SoundEffectViewController.m */; };
+		E92C1A4B24FD084D00417EE7 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E92C1A4A24FD084D00417EE7 /* libmp3lame.a */; };
+		E92C1A4F24FDE2E000417EE7 /* Sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = E92C1A4E24FDE2BC00417EE7 /* Sound.caf */; };
+		E92C1A5224FDEB9A00417EE7 /* 桜道.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E92C1A5124FDEB9A00417EE7 /* 桜道.mp3 */; };
+		E92C1A5524FDEBB100417EE7 /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C1A5424FDEBB100417EE7 /* MusicViewController.m */; };
+		E92C1A5924FE16FF00417EE7 /* AudioSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C1A5824FE16FF00417EE7 /* AudioSessionViewController.m */; };
+		E92C1A5D24FE266D00417EE7 /* MusicPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C1A5C24FE266D00417EE7 /* MusicPlayerController.m */; };
+		E92C1A6124FE4EEE00417EE7 /* FreeStreamerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C1A6024FE4EEE00417EE7 /* FreeStreamerViewController.m */; };
+		E92C1AC724FE51F400417EE7 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C1AA424FE51F400417EE7 /* Reachability.m */; };
+		E92C1AC824FE51F400417EE7 /* FSParseRssPodcastFeedRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C1AA524FE51F400417EE7 /* FSParseRssPodcastFeedRequest.m */; };
+		E92C1AC924FE51F400417EE7 /* http_stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92C1AA724FE51F400417EE7 /* http_stream.cpp */; };
+		E92C1ACA24FE51F400417EE7 /* FSPlaylistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C1AA824FE51F400417EE7 /* FSPlaylistItem.m */; };
+		E92C1ACB24FE51F400417EE7 /* audio_stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92C1AA924FE51F400417EE7 /* audio_stream.cpp */; };
+		E92C1ACC24FE51F400417EE7 /* id3_parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92C1AAB24FE51F400417EE7 /* id3_parser.cpp */; };
+		E92C1ACD24FE51F400417EE7 /* FSCheckContentTypeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C1AAC24FE51F400417EE7 /* FSCheckContentTypeRequest.m */; };
+		E92C1ACE24FE51F400417EE7 /* stream_configuration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92C1AAD24FE51F400417EE7 /* stream_configuration.cpp */; };
+		E92C1ACF24FE51F400417EE7 /* input_stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92C1AAF24FE51F400417EE7 /* input_stream.cpp */; };
+		E92C1AD024FE51F400417EE7 /* FSAudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C1AB224FE51F400417EE7 /* FSAudioController.m */; };
+		E92C1AD124FE51F400417EE7 /* file_output.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92C1AB324FE51F400417EE7 /* file_output.cpp */; };
+		E92C1AD224FE51F400417EE7 /* caching_stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92C1AB424FE51F400417EE7 /* caching_stream.cpp */; };
+		E92C1AD324FE51F400417EE7 /* FSXMLHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C1AB824FE51F400417EE7 /* FSXMLHttpRequest.m */; };
+		E92C1AD424FE51F400417EE7 /* FSAudioStream.mm in Sources */ = {isa = PBXBuildFile; fileRef = E92C1ABB24FE51F400417EE7 /* FSAudioStream.mm */; };
+		E92C1AD524FE51F400417EE7 /* audio_queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92C1ABD24FE51F400417EE7 /* audio_queue.cpp */; };
+		E92C1AD624FE51F400417EE7 /* file_stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E92C1ABF24FE51F400417EE7 /* file_stream.cpp */; };
+		E92C1AD724FE51F400417EE7 /* FSParsePlaylistRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C1AC024FE51F400417EE7 /* FSParsePlaylistRequest.m */; };
+		E92C1ADB24FE522500417EE7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92C1ADA24FE522500417EE7 /* CFNetwork.framework */; };
+		E92C1ADD24FE522F00417EE7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92C1ADC24FE522F00417EE7 /* AudioToolbox.framework */; };
+		E92C1ADF24FE523F00417EE7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92C1ADE24FE523F00417EE7 /* AVFoundation.framework */; };
+		E92C1AE224FE525C00417EE7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92C1AE124FE525C00417EE7 /* MediaPlayer.framework */; };
+		E92C1AE324FE527100417EE7 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E92C1AE024FE525000417EE7 /* libxml2.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E90335EE24F6620300727CCE /* AVAudioRecorderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVAudioRecorderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E90335F124F6620300727CCE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E90335F224F6620300727CCE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E90335FD24F6620400727CCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E903360024F6620400727CCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E903360224F6620400727CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E903360324F6620400727CCE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E903366824F8B06C00727CCE /* BasicUseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicUseViewController.h; sourceTree = "<group>"; };
+		E903366924F8B06C00727CCE /* BasicUseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicUseViewController.m; sourceTree = "<group>"; };
+		E903366C24F8B0F900727CCE /* ToolKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolKitViewController.h; sourceTree = "<group>"; };
+		E903366D24F8B0F900727CCE /* ToolKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolKitViewController.m; sourceTree = "<group>"; };
+		E903366F24F8D00000727CCE /* Single.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Single.h; sourceTree = "<group>"; };
+		E903367024F8D03300727CCE /* AudioTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioTool.h; sourceTree = "<group>"; };
+		E903367124F8D03300727CCE /* AudioTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioTool.m; sourceTree = "<group>"; };
+		E903367324F8DA2800727CCE /* AudioFileTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioFileTool.h; sourceTree = "<group>"; };
+		E903367424F8DA2800727CCE /* AudioFileTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioFileTool.m; sourceTree = "<group>"; };
+		E903367624F8FAD800727CCE /* RecorderKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecorderKit.h; sourceTree = "<group>"; };
+		E903367724F8FF2100727CCE /* AudioPlayerTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioPlayerTool.h; sourceTree = "<group>"; };
+		E903367824F8FF2100727CCE /* AudioPlayerTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioPlayerTool.m; sourceTree = "<group>"; };
+		E903367A24F9042F00727CCE /* AudioFilePathTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioFilePathTool.h; sourceTree = "<group>"; };
+		E903367B24F9042F00727CCE /* AudioFilePathTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioFilePathTool.m; sourceTree = "<group>"; };
+		E903367F24F908A400727CCE /* lame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
+		E903368024F908C000727CCE /* LameTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LameTool.h; sourceTree = "<group>"; };
+		E903368124F908C000727CCE /* LameTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LameTool.m; sourceTree = "<group>"; };
+		E92C1A4724FD043C00417EE7 /* SoundEffectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoundEffectViewController.h; sourceTree = "<group>"; };
+		E92C1A4824FD043C00417EE7 /* SoundEffectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundEffectViewController.m; sourceTree = "<group>"; };
+		E92C1A4A24FD084D00417EE7 /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
+		E92C1A4E24FDE2BC00417EE7 /* Sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sound.caf; sourceTree = "<group>"; };
+		E92C1A5124FDEB9A00417EE7 /* 桜道.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "桜道.mp3"; sourceTree = "<group>"; };
+		E92C1A5324FDEBB100417EE7 /* MusicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
+		E92C1A5424FDEBB100417EE7 /* MusicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
+		E92C1A5724FE16FF00417EE7 /* AudioSessionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioSessionViewController.h; sourceTree = "<group>"; };
+		E92C1A5824FE16FF00417EE7 /* AudioSessionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioSessionViewController.m; sourceTree = "<group>"; };
+		E92C1A5B24FE266D00417EE7 /* MusicPlayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicPlayerController.h; sourceTree = "<group>"; };
+		E92C1A5C24FE266D00417EE7 /* MusicPlayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicPlayerController.m; sourceTree = "<group>"; };
+		E92C1A5F24FE4EEE00417EE7 /* FreeStreamerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FreeStreamerViewController.h; sourceTree = "<group>"; };
+		E92C1A6024FE4EEE00417EE7 /* FreeStreamerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FreeStreamerViewController.m; sourceTree = "<group>"; };
+		E92C1AA324FE51F400417EE7 /* audio_queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audio_queue.h; sourceTree = "<group>"; };
+		E92C1AA424FE51F400417EE7 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		E92C1AA524FE51F400417EE7 /* FSParseRssPodcastFeedRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSParseRssPodcastFeedRequest.m; sourceTree = "<group>"; };
+		E92C1AA624FE51F400417EE7 /* FSXMLHttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSXMLHttpRequest.h; sourceTree = "<group>"; };
+		E92C1AA724FE51F400417EE7 /* http_stream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = http_stream.cpp; sourceTree = "<group>"; };
+		E92C1AA824FE51F400417EE7 /* FSPlaylistItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSPlaylistItem.m; sourceTree = "<group>"; };
+		E92C1AA924FE51F400417EE7 /* audio_stream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = audio_stream.cpp; sourceTree = "<group>"; };
+		E92C1AAA24FE51F400417EE7 /* FSParsePlaylistRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSParsePlaylistRequest.h; sourceTree = "<group>"; };
+		E92C1AAB24FE51F400417EE7 /* id3_parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = id3_parser.cpp; sourceTree = "<group>"; };
+		E92C1AAC24FE51F400417EE7 /* FSCheckContentTypeRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCheckContentTypeRequest.m; sourceTree = "<group>"; };
+		E92C1AAD24FE51F400417EE7 /* stream_configuration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stream_configuration.cpp; sourceTree = "<group>"; };
+		E92C1AAE24FE51F400417EE7 /* file_stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = file_stream.h; sourceTree = "<group>"; };
+		E92C1AAF24FE51F400417EE7 /* input_stream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = input_stream.cpp; sourceTree = "<group>"; };
+		E92C1AB024FE51F400417EE7 /* input_stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = input_stream.h; sourceTree = "<group>"; };
+		E92C1AB124FE51F400417EE7 /* file_output.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = file_output.h; sourceTree = "<group>"; };
+		E92C1AB224FE51F400417EE7 /* FSAudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSAudioController.m; sourceTree = "<group>"; };
+		E92C1AB324FE51F400417EE7 /* file_output.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = file_output.cpp; sourceTree = "<group>"; };
+		E92C1AB424FE51F400417EE7 /* caching_stream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = caching_stream.cpp; sourceTree = "<group>"; };
+		E92C1AB524FE51F400417EE7 /* audio_stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audio_stream.h; sourceTree = "<group>"; };
+		E92C1AB624FE51F400417EE7 /* http_stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = http_stream.h; sourceTree = "<group>"; };
+		E92C1AB724FE51F400417EE7 /* FSPlaylistItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSPlaylistItem.h; sourceTree = "<group>"; };
+		E92C1AB824FE51F400417EE7 /* FSXMLHttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSXMLHttpRequest.m; sourceTree = "<group>"; };
+		E92C1AB924FE51F400417EE7 /* FSParseRssPodcastFeedRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSParseRssPodcastFeedRequest.h; sourceTree = "<group>"; };
+		E92C1ABA24FE51F400417EE7 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		E92C1ABB24FE51F400417EE7 /* FSAudioStream.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FSAudioStream.mm; sourceTree = "<group>"; };
+		E92C1ABC24FE51F400417EE7 /* id3_parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = id3_parser.h; sourceTree = "<group>"; };
+		E92C1ABD24FE51F400417EE7 /* audio_queue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = audio_queue.cpp; sourceTree = "<group>"; };
+		E92C1ABE24FE51F400417EE7 /* FSCheckContentTypeRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCheckContentTypeRequest.h; sourceTree = "<group>"; };
+		E92C1ABF24FE51F400417EE7 /* file_stream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = file_stream.cpp; sourceTree = "<group>"; };
+		E92C1AC024FE51F400417EE7 /* FSParsePlaylistRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSParsePlaylistRequest.m; sourceTree = "<group>"; };
+		E92C1AC124FE51F400417EE7 /* FSAudioStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAudioStream.h; sourceTree = "<group>"; };
+		E92C1AC224FE51F400417EE7 /* FreeStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeStreamer.h; sourceTree = "<group>"; };
+		E92C1AC324FE51F400417EE7 /* FSAudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSAudioController.h; sourceTree = "<group>"; };
+		E92C1AC424FE51F400417EE7 /* stream_configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stream_configuration.h; sourceTree = "<group>"; };
+		E92C1AC624FE51F400417EE7 /* caching_stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = caching_stream.h; sourceTree = "<group>"; };
+		E92C1ADA24FE522500417EE7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E92C1ADC24FE522F00417EE7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E92C1ADE24FE523F00417EE7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E92C1AE024FE525000417EE7 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		E92C1AE124FE525C00417EE7 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		E92C1AE424FE52EA00417EE7 /* FreeStreamerMobile-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FreeStreamerMobile-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E90335EB24F6620300727CCE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E92C1ADF24FE523F00417EE7 /* AVFoundation.framework in Frameworks */,
+				E92C1AE224FE525C00417EE7 /* MediaPlayer.framework in Frameworks */,
+				E92C1ADB24FE522500417EE7 /* CFNetwork.framework in Frameworks */,
+				E92C1AE324FE527100417EE7 /* libxml2.tbd in Frameworks */,
+				E92C1A4B24FD084D00417EE7 /* libmp3lame.a in Frameworks */,
+				E92C1ADD24FE522F00417EE7 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E90335E524F6620300727CCE = {
+			isa = PBXGroup;
+			children = (
+				E90335F024F6620300727CCE /* AVAudioRecorderDemo */,
+				E90335EF24F6620300727CCE /* Products */,
+				E92C1AD924FE522500417EE7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E90335EF24F6620300727CCE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E90335EE24F6620300727CCE /* AVAudioRecorderDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E90335F024F6620300727CCE /* AVAudioRecorderDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E92C1A5E24FE4ECF00417EE7 /* 音频队列服务 */,
+				E92C1A5A24FE264F00417EE7 /* 音乐库 */,
+				E92C1A5624FE16D400417EE7 /* 音频会话 */,
+				E92C1A5024FDEB8A00417EE7 /* 音乐 */,
+				E92C1A4624FD03C800417EE7 /* 音效 */,
+				E903360B24F6621F00727CCE /* 录音基本实现 */,
+				E903366B24F8B0B200727CCE /* 录音封装成工具类 */,
+				E903360A24F6620F00727CCE /* SupportingFiles */,
+				E903360224F6620400727CCE /* Info.plist */,
+			);
+			path = AVAudioRecorderDemo;
+			sourceTree = "<group>";
+		};
+		E903360A24F6620F00727CCE /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E90335F124F6620300727CCE /* AppDelegate.h */,
+				E90335F224F6620300727CCE /* AppDelegate.m */,
+				E90335FD24F6620400727CCE /* Assets.xcassets */,
+				E90335FF24F6620400727CCE /* LaunchScreen.storyboard */,
+				E903360324F6620400727CCE /* main.m */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		E903360B24F6621F00727CCE /* 录音基本实现 */ = {
+			isa = PBXGroup;
+			children = (
+				E903366824F8B06C00727CCE /* BasicUseViewController.h */,
+				E903366924F8B06C00727CCE /* BasicUseViewController.m */,
+			);
+			path = "录音基本实现";
+			sourceTree = "<group>";
+		};
+		E903366B24F8B0B200727CCE /* 录音封装成工具类 */ = {
+			isa = PBXGroup;
+			children = (
+				E903366C24F8B0F900727CCE /* ToolKitViewController.h */,
+				E903366D24F8B0F900727CCE /* ToolKitViewController.m */,
+				E903367024F8D03300727CCE /* AudioTool.h */,
+				E903367124F8D03300727CCE /* AudioTool.m */,
+				E903367324F8DA2800727CCE /* AudioFileTool.h */,
+				E903367424F8DA2800727CCE /* AudioFileTool.m */,
+				E903367724F8FF2100727CCE /* AudioPlayerTool.h */,
+				E903367824F8FF2100727CCE /* AudioPlayerTool.m */,
+				E903367A24F9042F00727CCE /* AudioFilePathTool.h */,
+				E903367B24F9042F00727CCE /* AudioFilePathTool.m */,
+				E903368024F908C000727CCE /* LameTool.h */,
+				E903368124F908C000727CCE /* LameTool.m */,
+				E903367624F8FAD800727CCE /* RecorderKit.h */,
+				E903366F24F8D00000727CCE /* Single.h */,
+				E903367F24F908A400727CCE /* lame.h */,
+				E92C1A4A24FD084D00417EE7 /* libmp3lame.a */,
+			);
+			path = "录音封装成工具类";
+			sourceTree = "<group>";
+		};
+		E92C1A4624FD03C800417EE7 /* 音效 */ = {
+			isa = PBXGroup;
+			children = (
+				E92C1A4724FD043C00417EE7 /* SoundEffectViewController.h */,
+				E92C1A4824FD043C00417EE7 /* SoundEffectViewController.m */,
+				E92C1A4E24FDE2BC00417EE7 /* Sound.caf */,
+			);
+			path = "音效";
+			sourceTree = "<group>";
+		};
+		E92C1A5024FDEB8A00417EE7 /* 音乐 */ = {
+			isa = PBXGroup;
+			children = (
+				E92C1A5124FDEB9A00417EE7 /* 桜道.mp3 */,
+				E92C1A5324FDEBB100417EE7 /* MusicViewController.h */,
+				E92C1A5424FDEBB100417EE7 /* MusicViewController.m */,
+			);
+			path = "音乐";
+			sourceTree = "<group>";
+		};
+		E92C1A5624FE16D400417EE7 /* 音频会话 */ = {
+			isa = PBXGroup;
+			children = (
+				E92C1A5724FE16FF00417EE7 /* AudioSessionViewController.h */,
+				E92C1A5824FE16FF00417EE7 /* AudioSessionViewController.m */,
+			);
+			path = "音频会话";
+			sourceTree = "<group>";
+		};
+		E92C1A5A24FE264F00417EE7 /* 音乐库 */ = {
+			isa = PBXGroup;
+			children = (
+				E92C1A5B24FE266D00417EE7 /* MusicPlayerController.h */,
+				E92C1A5C24FE266D00417EE7 /* MusicPlayerController.m */,
+			);
+			path = "音乐库";
+			sourceTree = "<group>";
+		};
+		E92C1A5E24FE4ECF00417EE7 /* 音频队列服务 */ = {
+			isa = PBXGroup;
+			children = (
+				E92C1AE424FE52EA00417EE7 /* FreeStreamerMobile-Prefix.pch */,
+				E92C1AA224FE51F400417EE7 /* FreeStreamer */,
+				E92C1A5F24FE4EEE00417EE7 /* FreeStreamerViewController.h */,
+				E92C1A6024FE4EEE00417EE7 /* FreeStreamerViewController.m */,
+			);
+			path = "音频队列服务";
+			sourceTree = "<group>";
+		};
+		E92C1AA224FE51F400417EE7 /* FreeStreamer */ = {
+			isa = PBXGroup;
+			children = (
+				E92C1AA324FE51F400417EE7 /* audio_queue.h */,
+				E92C1AA424FE51F400417EE7 /* Reachability.m */,
+				E92C1AA524FE51F400417EE7 /* FSParseRssPodcastFeedRequest.m */,
+				E92C1AA624FE51F400417EE7 /* FSXMLHttpRequest.h */,
+				E92C1AA724FE51F400417EE7 /* http_stream.cpp */,
+				E92C1AA824FE51F400417EE7 /* FSPlaylistItem.m */,
+				E92C1AA924FE51F400417EE7 /* audio_stream.cpp */,
+				E92C1AAA24FE51F400417EE7 /* FSParsePlaylistRequest.h */,
+				E92C1AAB24FE51F400417EE7 /* id3_parser.cpp */,
+				E92C1AAC24FE51F400417EE7 /* FSCheckContentTypeRequest.m */,
+				E92C1AAD24FE51F400417EE7 /* stream_configuration.cpp */,
+				E92C1AAE24FE51F400417EE7 /* file_stream.h */,
+				E92C1AAF24FE51F400417EE7 /* input_stream.cpp */,
+				E92C1AB024FE51F400417EE7 /* input_stream.h */,
+				E92C1AB124FE51F400417EE7 /* file_output.h */,
+				E92C1AB224FE51F400417EE7 /* FSAudioController.m */,
+				E92C1AB324FE51F400417EE7 /* file_output.cpp */,
+				E92C1AB424FE51F400417EE7 /* caching_stream.cpp */,
+				E92C1AB524FE51F400417EE7 /* audio_stream.h */,
+				E92C1AB624FE51F400417EE7 /* http_stream.h */,
+				E92C1AB724FE51F400417EE7 /* FSPlaylistItem.h */,
+				E92C1AB824FE51F400417EE7 /* FSXMLHttpRequest.m */,
+				E92C1AB924FE51F400417EE7 /* FSParseRssPodcastFeedRequest.h */,
+				E92C1ABA24FE51F400417EE7 /* Reachability.h */,
+				E92C1ABB24FE51F400417EE7 /* FSAudioStream.mm */,
+				E92C1ABC24FE51F400417EE7 /* id3_parser.h */,
+				E92C1ABD24FE51F400417EE7 /* audio_queue.cpp */,
+				E92C1ABE24FE51F400417EE7 /* FSCheckContentTypeRequest.h */,
+				E92C1ABF24FE51F400417EE7 /* file_stream.cpp */,
+				E92C1AC024FE51F400417EE7 /* FSParsePlaylistRequest.m */,
+				E92C1AC124FE51F400417EE7 /* FSAudioStream.h */,
+				E92C1AC224FE51F400417EE7 /* FreeStreamer.h */,
+				E92C1AC324FE51F400417EE7 /* FSAudioController.h */,
+				E92C1AC424FE51F400417EE7 /* stream_configuration.h */,
+				E92C1AC624FE51F400417EE7 /* caching_stream.h */,
+			);
+			path = FreeStreamer;
+			sourceTree = "<group>";
+		};
+		E92C1AD924FE522500417EE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E92C1AE124FE525C00417EE7 /* MediaPlayer.framework */,
+				E92C1AE024FE525000417EE7 /* libxml2.tbd */,
+				E92C1ADE24FE523F00417EE7 /* AVFoundation.framework */,
+				E92C1ADC24FE522F00417EE7 /* AudioToolbox.framework */,
+				E92C1ADA24FE522500417EE7 /* CFNetwork.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E90335ED24F6620300727CCE /* AVAudioRecorderDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E903360724F6620400727CCE /* Build configuration list for PBXNativeTarget "AVAudioRecorderDemo" */;
+			buildPhases = (
+				E90335EA24F6620300727CCE /* Sources */,
+				E90335EB24F6620300727CCE /* Frameworks */,
+				E90335EC24F6620300727CCE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AVAudioRecorderDemo;
+			productName = AVAudioRecorderDemo;
+			productReference = E90335EE24F6620300727CCE /* AVAudioRecorderDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E90335E624F6620300727CCE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = xiejiapei;
+				TargetAttributes = {
+					E90335ED24F6620300727CCE = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = E90335E924F6620300727CCE /* Build configuration list for PBXProject "AVAudioRecorderDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E90335E524F6620300727CCE;
+			productRefGroup = E90335EF24F6620300727CCE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E90335ED24F6620300727CCE /* AVAudioRecorderDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E90335EC24F6620300727CCE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E903360124F6620400727CCE /* LaunchScreen.storyboard in Resources */,
+				E90335FE24F6620400727CCE /* Assets.xcassets in Resources */,
+				E92C1A4F24FDE2E000417EE7 /* Sound.caf in Resources */,
+				E92C1A5224FDEB9A00417EE7 /* 桜道.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E90335EA24F6620300727CCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E92C1AC824FE51F400417EE7 /* FSParseRssPodcastFeedRequest.m in Sources */,
+				E92C1ACF24FE51F400417EE7 /* input_stream.cpp in Sources */,
+				E92C1A5924FE16FF00417EE7 /* AudioSessionViewController.m in Sources */,
+				E92C1AD724FE51F400417EE7 /* FSParsePlaylistRequest.m in Sources */,
+				E92C1AD324FE51F400417EE7 /* FSXMLHttpRequest.m in Sources */,
+				E92C1A6124FE4EEE00417EE7 /* FreeStreamerViewController.m in Sources */,
+				E903368224F908C000727CCE /* LameTool.m in Sources */,
+				E903367224F8D03300727CCE /* AudioTool.m in Sources */,
+				E92C1AD624FE51F400417EE7 /* file_stream.cpp in Sources */,
+				E92C1AC724FE51F400417EE7 /* Reachability.m in Sources */,
+				E903367C24F9042F00727CCE /* AudioFilePathTool.m in Sources */,
+				E92C1ACA24FE51F400417EE7 /* FSPlaylistItem.m in Sources */,
+				E903367924F8FF2100727CCE /* AudioPlayerTool.m in Sources */,
+				E92C1AD424FE51F400417EE7 /* FSAudioStream.mm in Sources */,
+				E90335F324F6620300727CCE /* AppDelegate.m in Sources */,
+				E92C1AC924FE51F400417EE7 /* http_stream.cpp in Sources */,
+				E903366A24F8B06C00727CCE /* BasicUseViewController.m in Sources */,
+				E903360424F6620400727CCE /* main.m in Sources */,
+				E92C1AD124FE51F400417EE7 /* file_output.cpp in Sources */,
+				E92C1ACB24FE51F400417EE7 /* audio_stream.cpp in Sources */,
+				E92C1A4924FD043C00417EE7 /* SoundEffectViewController.m in Sources */,
+				E92C1A5524FDEBB100417EE7 /* MusicViewController.m in Sources */,
+				E92C1ACE24FE51F400417EE7 /* stream_configuration.cpp in Sources */,
+				E903367524F8DA2800727CCE /* AudioFileTool.m in Sources */,
+				E92C1A5D24FE266D00417EE7 /* MusicPlayerController.m in Sources */,
+				E92C1AD224FE51F400417EE7 /* caching_stream.cpp in Sources */,
+				E92C1ACD24FE51F400417EE7 /* FSCheckContentTypeRequest.m in Sources */,
+				E92C1AD024FE51F400417EE7 /* FSAudioController.m in Sources */,
+				E903366E24F8B0F900727CCE /* ToolKitViewController.m in Sources */,
+				E92C1ACC24FE51F400417EE7 /* id3_parser.cpp in Sources */,
+				E92C1AD524FE51F400417EE7 /* audio_queue.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E90335FF24F6620400727CCE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E903360024F6620400727CCE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E903360524F6620400727CCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E903360624F6620400727CCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E903360824F6620400727CCE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MRMHT335N6;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/AVAudioRecorderDemo/音频队列服务/FreeStreamerMobile-Prefix.pch";
+				INFOPLIST_FILE = AVAudioRecorderDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AVAudioRecorderDemo/封装工具类",
+					"$(PROJECT_DIR)/AVAudioRecorderDemo/录音封装成工具类",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiejiapei.AVAudioRecorderDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E903360924F6620400727CCE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MRMHT335N6;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/AVAudioRecorderDemo/音频队列服务/FreeStreamerMobile-Prefix.pch";
+				INFOPLIST_FILE = AVAudioRecorderDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AVAudioRecorderDemo/封装工具类",
+					"$(PROJECT_DIR)/AVAudioRecorderDemo/录音封装成工具类",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiejiapei.AVAudioRecorderDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E90335E924F6620300727CCE /* Build configuration list for PBXProject "AVAudioRecorderDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E903360524F6620400727CCE /* Debug */,
+				E903360624F6620400727CCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E903360724F6620400727CCE /* Build configuration list for PBXNativeTarget "AVAudioRecorderDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E903360824F6620400727CCE /* Debug */,
+				E903360924F6620400727CCE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E90335E624F6620300727CCE /* Project object */;
+}
