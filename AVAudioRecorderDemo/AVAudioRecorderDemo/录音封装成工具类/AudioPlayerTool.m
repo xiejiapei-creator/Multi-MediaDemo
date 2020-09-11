@@ -226,7 +226,7 @@ SingleM(AudioPlayerTool)
 {
     [self.audioPlayer setEnableRate:enableRate];
 }
-
+ 
 // 播放速率
 - (float)rate
 {
