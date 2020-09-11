@@ -603,7 +603,7 @@ typedef void(^PropertyChangeBlock)(AVCaptureDevice *captureDevice);
 {
     NSLog(@"会话发生错误.");
 }
-
+ 
 @end
 
 
