@@ -41,7 +41,7 @@
     [button setImage:[UIImage imageNamed:@"player_start_iphone_window@3x.png"] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(playClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
-    
+      
     // 切换视频
     UIButton * button1 = [[UIButton alloc] initWithFrame:CGRectMake(50, 500, 50, 50)];
     [button1 setTitle:@"1" forState:UIControlStateNormal];
