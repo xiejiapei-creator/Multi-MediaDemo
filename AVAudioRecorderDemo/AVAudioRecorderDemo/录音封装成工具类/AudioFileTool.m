@@ -21,6 +21,7 @@
     AVURLAsset *backAudioAsset = [AVURLAsset assetWithURL:[NSURL fileURLWithPath:toPath]];
     
     //2. 获取两个音频素材中的素材轨道
+    //音频轨迹(视频至少有2个轨道，一个播放声音，一个播放画面。音频只有一个)
     AVAssetTrack *frontAudioAssetTrack = [[frontAudioAsset tracksWithMediaType:AVMediaTypeAudio] firstObject];
     AVAssetTrack *backAudioAssetTrack = [[backAudioAsset tracksWithMediaType:AVMediaTypeAudio] firstObject];
     
@@ -123,10 +124,10 @@
     // AVURLAsset可以用来读取网络音视频流
     AVURLAsset *songAsset = [AVURLAsset URLAssetWithURL:originalUrl options:nil];
 
-// 以下为视频的导入和导出
+// 以下为音频的导入和导出
 // 1. 创建一个读数据对象，用来读取原始文件信息
     
-    // AVAssetReader可以将视频文件导出到CMSampleBuffer
+    // AVAssetReader可以将音频文件导出到CMSampleBuffer
     NSError *error = nil;
     AVAssetReader *assetReader = [AVAssetReader assetReaderWithAsset:songAsset error:&error];
     
@@ -269,7 +270,7 @@
 + (void)convetCafToM4a:(NSString *)cafUrlString destUrl:(NSString *)m4aUrlString completed:(void (^)(NSError *))completed
 {
 // 1. 向音频合成器, 添加一个空的素材容器
-    
+    // 用来合成视频或音频
     AVMutableComposition* mixComposition = [AVMutableComposition composition];
     // 音频插入的开始时间
     CMTime beginTime = kCMTimeZero;
@@ -303,6 +304,7 @@
     assetExport.outputURL = [NSURL fileURLWithPath:m4aUrlString];
     // 导出音视频的文件格式
     assetExport.outputFileType = @"com.apple.m4a-audio";
+    // assetExport.outputFileType = AVFileTypeAppleM4A;
     // 开始导出数据
     [assetExport exportAsynchronouslyWithCompletionHandler:^{
         // 分发到主线程

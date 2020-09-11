@@ -21,6 +21,7 @@
 // 工具类单例
 SingleM(LameTool)
 
+// 录音完成的调用
 - (void)sendEndRecord
 {
     self.stopRecord = YES;
@@ -65,25 +66,44 @@ SingleM(LameTool)
             short int pcm_buffer[PCM_SIZE*2];
             unsigned char mp3_buffer[MP3_SIZE];
             
-            lame_t lame = lame_init();
-            lame_set_in_samplerate(lame, 11025.0);
-            lame_set_VBR(lame, vbr_default);
+            lame_t lame = lame_init();// 初始化
+            
+            // 设置1为单通道，默认为2双通道，设置单声道会更大程度减少压缩后文件的体积，但是会造成MP3声音尖锐变声
+            // lame_set_num_channels(lame,1);
+            // 设置MP3音频质量 0~9 其中0是最好但非常慢，9是最差
+            // lame_set_quality(lame,2);
+            // 设置输出MP3的采样率
+            // lame_set_out_samplerate
+            
+            lame_set_in_samplerate(lame, 11025.0);// 设置wav或caf的采样率
+            lame_set_VBR(lame, vbr_default);// 设置mp3的编码方式
             lame_init_params(lame);
             
             // 执行一个 do while 的循环来反复读取
             do {
                 size_t size = (size_t)(2 * sizeof(short int));
+                // 将文件读进内存
                 read = (int)fread(pcm_buffer, size, PCM_SIZE, pcm);
                 if (read == 0)
                 {
+                   // 当read为0，说明pcm文件已经全部读取完毕，调用lame_encode_flush即可
                    write = lame_encode_flush(lame, mp3_buffer, MP3_SIZE);
                 }
-                else
+                else // 当read不为0，调用lame_encode_buffer进行转码
                 {
+                    // 双声道千万要使用lame_encode_buffer_interleaved这个函数
+                    // 32位、单声道需要调用其他函数
+                    // lame_encode_buffer 单声道，16位
+                    // lame_encode_buffer_interleaved 双声道，16位
+                    // lame_encode_buffer_float 单声道，32位
                     write = lame_encode_buffer_interleaved(lame, pcm_buffer, read, mp3_buffer, MP3_SIZE);
                 }
+                // 保存mp3文件
                 fwrite(mp3_buffer, write, 1, mp3);
             } while (read != 0);// 直到 read != 0 结束转码
+            
+            // 写入Mp3 VBR Tag，可解决获取时长不准的问题
+            lame_mp3_tags_fid(lame, mp3);
             
             // 释放
             lame_close(lame);
@@ -160,9 +180,23 @@ SingleM(LameTool)
             short int pcm_buffer[PCM_SIZE * 2];
             unsigned char mp3_buffer[MP3_SIZE];
             
+            /*
+             const int PCM_SIZE = 640 * 2; //双声道*2 单声道640即可
+             const int MP3_SIZE = 8800; //计算公式pcm_size * 1.25 + 7200
+             short int pcm_buffer[PCM_SIZE];
+             unsigned char mp3_buffer[MP3_SIZE];
+             */
+            
+            // 这里要注意，lame的配置要跟AVAudioRecorder的配置一致，否则会造成转换不成功
             // 初始化
             lame_t lame = lame_init();
-            lame_set_in_samplerate(lame, 11025.0);
+            
+            // 设置1为单通道，默认为2双通道，设置单声道会更大程度减少压缩后文件的体积，但是会造成MP3声音尖锐变声
+            // lame_set_num_channels(lame,1);
+            // 设置转码质量高
+            // lame_set_quality(lame,2);
+            
+            lame_set_in_samplerate(lame, 11025.0);// 设置采样率
             lame_set_VBR(lame, vbr_default);
             lame_init_params(lame);
             
@@ -184,15 +218,15 @@ SingleM(LameTool)
                     
                     if (!isSkipPCMHeader)
                     {
-                        //Uump audio file header, If you do not skip file header
-                        //you will heard some noise at the beginning!!!
-                        //skip file header 跳过 PCM header 能保证录音的开头没有噪音
-                        //如果不跳过这一部分，转换成的mp3在播放的最初一秒内会听到一个明显的噪音
+                        // PCM数据头有四个字节的头信息，skip file header 跳过 PCM header 能保证录音的开头没有噪音
+                        // 如果不跳过这一部分，转换成的mp3在播放的最初一秒内会听到一个明显的噪音
                         fseek(pcm, 4 * 1024, SEEK_CUR);
                         isSkipPCMHeader = YES;
                         NSLog(@"skip pcm file header !!!!!!!!!!，跳过 PCM header 能保证录音的开头没有噪音 ");
                     }
                     
+                    // 从文件流每次读取一定数量buffer转码MP3写入，直到全部读取完文件流
+                    // 将文件读进内存
                     read = (int)fread(pcm_buffer, 2 * sizeof(short int), PCM_SIZE, pcm);
                     write = lame_encode_buffer_interleaved(lame, pcm_buffer, read, mp3_buffer, MP3_SIZE);
                     fwrite(mp3_buffer, write, 1, mp3);
@@ -206,12 +240,16 @@ SingleM(LameTool)
                 
             } while (!weakself.stopRecord);// 在while的条件中，当收到录音结束的判断，则会结束 do while 的循环
             
+            // 从文件流每次读取一定数量buffer转码MP3写入，直到全部读取完文件流
+            // 从文件流每次读取两个字节的数据，依次存入buffer，demo处理的是16位PCM数据，所以左右声道各占两个字节
             read = (int)fread(pcm_buffer, 2 * sizeof(short int), PCM_SIZE, pcm);
             write = lame_encode_flush(lame, mp3_buffer, MP3_SIZE);
             
             NSLog(@"read %d bytes and flush to mp3 file", write);
+            // 写入Mp3 VBR Tag，可解决获取时长不准的问题
             lame_mp3_tags_fid(lame, mp3);
             
+            // 释放
             lame_close(lame);
             fclose(mp3);
             fclose(pcm);

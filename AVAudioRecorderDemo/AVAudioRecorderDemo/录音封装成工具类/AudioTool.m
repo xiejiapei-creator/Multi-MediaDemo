@@ -41,8 +41,9 @@ SingleM(AudioTool)
 - (void)beginRecordWithRecordName:(NSString *)recordName withRecordType:(NSString *)type withIsConventToMp3:(BOOL)isConventToMp3
 {
     //1. 正在录制就直接返回，防止多次点击录音
-    if ([self.audioRecorder isRecording])
+    if (_audioRecorder && [_audioRecorder isRecording])
     {
+        NSLog(@"正在录制就直接返回");
         return;
     }
     
@@ -81,6 +82,7 @@ SingleM(AudioTool)
         {
             [[LameTool shareLameTool] audioRecodingToMP3:_recordPath isDeleteSourchFile:YES withSuccessBack:^(NSString * _Nonnull resultPath) {
                 NSLog(@"转 MP3 成功");
+                NSLog(@"转为MP3后的路径 = %@",resultPath);
             } withFailBack:^(NSString * _Nonnull error) {
                 NSLog(@"转 MP3 失败");
             }];
@@ -172,7 +174,7 @@ SingleM(AudioTool)
 
 // AVAudioSession通知：接收录制中断事件通知，并处理相关事件
 // 监听诸如系统来电，闹钟响铃，Facetime……导致的音频录制终端事件
--(void)handleNotification:(NSNotification *)notification
+- (void)handleNotification:(NSNotification *)notification
 {
     NSArray *allKeys = notification.userInfo.allKeys;
     // 判断事件类型
@@ -201,6 +203,23 @@ SingleM(AudioTool)
     }
 }
 
+// 耳机：开启接近监视(靠近耳朵的时候听筒播放，离开的时候扬声器播放)
+/*
+- (void)proximityStateChange:(NSNotificationCenter *)notification
+{
+    if ([[UIDevice currentDevice] proximityState] == YES)
+    {
+        //靠近耳朵
+        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
+    }
+    else
+    {
+        //离开耳朵
+        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+    }
+}
+*/
+
 #pragma mark - Getter/Setter
 
 - (AVAudioRecorder *)audioRecorder
@@ -211,10 +230,12 @@ SingleM(AudioTool)
     {
 //0. 设置录音会话
         // 音频会话是应用程序和操作系统之间的中间人。应用程序不需要具体知道怎样和音频硬件交互的细节，只需要把所需的音频行为委托给音频会话管理即可。
-        /* AVAudioSessionCategoryPlayAndRecord: 可以边播放边录音(也就是平时看到的背景音乐)
-         * 打断不支持混音播放的APP
-         * 不会响应手机静音键开关
-         * 支持音频录制和播放
+        /* Category
+         * AVAudioSessionCategoryPlayAndRecord :录制和播放。打断不支持混音播放的APP，不会响应手机静音键开关
+         * AVAudioSessionCategoryAmbient       :用于非以语音为主的应用，随着静音键和屏幕关闭而静音
+         * AVAudioSessionCategorySoloAmbient   :类似AVAudioSessionCategoryAmbient不同之处在于它会中止其它应用播放声音
+         * AVAudioSessionCategoryPlayback      :用于以语音为主的应用，不会随着静音键和屏幕关闭而静音，可在后台播放声音
+         * AVAudioSessionCategoryRecord        :用于需要录音的应用，除了来电铃声，闹钟或日历提醒之外的其它系统声音都不会被播放，只提供单纯录音功能
          */
         [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
         // 启动会话
@@ -223,6 +244,10 @@ SingleM(AudioTool)
         // 注册音频录制中断通知
         NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
         [notificationCenter addObserver:self selector:@selector(handleNotification:) name:AVAudioSessionInterruptionNotification object:nil];
+        
+        // 耳机：开启接近监视(靠近耳朵的时候听筒播放，离开的时候扬声器播放)
+        // [[UIDevice currentDevice] setProximityMonitoringEnabled:YES];
+        // [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sensorStateChange:) name:UIDeviceProximityStateDidChangeNotification object:nil];
         
 //1. 确定录音存放的位置
         NSURL *url = [NSURL URLWithString:weakSelf.recordPath];

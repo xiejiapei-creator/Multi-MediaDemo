@@ -7,11 +7,16 @@
 //
 
 #import "AudioPlayerTool.h"
+#import "AudioConverter.h"
 
 @interface AudioPlayerTool()<AVAudioPlayerDelegate>
 
-/** 音乐播放器 */
+// 音乐播放器
 @property (nonatomic ,strong) AVAudioPlayer *audioPlayer;
+// 音乐播放器
+@property (strong, nonatomic) AVAudioPlayer *currentPlayer;
+// 本地路径
+@property (copy, nonatomic) NSString * localPath;
 
 @end
 
@@ -19,6 +24,104 @@
 
 // 工具类单例
 SingleM(AudioPlayerTool)
+
+#pragma mark - 播放器
+
+// 初始化
+- (instancetype)initWithDelegate:(id)delegate
+{
+    if (self = [super init])
+    {
+        self.delegate = delegate;
+    }
+    return self;
+}
+
+// 根据URL播放音频
+- (void)playAtURL:(NSString*)url isMP3Audio:(BOOL)isMP3Audio
+{
+    // 获取localPath
+    NSString *localPath = [AudioPlayerTool defaultCachePathWithURL:url isMP3Audio:isMP3Audio];
+    self.localPath = localPath;
+    
+    // 根据localPath播放音频
+    [self playAtPath:localPath isMP3Audio:isMP3Audio];
+}
+
+// 根据localPath播放音频
+- (void)playAtPath:(NSString *)path isMP3Audio:(BOOL)isMP3Audio
+{
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    [audioSession setCategory:AVAudioSessionCategoryPlayback withOptions:AVAudioSessionCategoryOptionDuckOthers error:nil];
+    
+    // 先停止之前的播放器
+    if (self.currentPlayer)
+    {
+        self.currentPlayer.delegate = nil;
+        [self.currentPlayer stop];
+        self.currentPlayer = nil;
+    }
+    
+    // 创建新的播放器
+    NSData * data = [NSData dataWithContentsOfFile:path];
+    if (!isMP3Audio)
+    {
+        // 如果是AVE则需要转化数据
+        data = [AudioConverter getWAVEDataFrom:data];
+    }
+    NSError * error = nil;
+    AVAudioPlayer * player = [[AVAudioPlayer alloc] initWithData:data error:&error];
+    
+    // 创建出错
+    if (error)
+    {
+        // 调用播放完成的委托回调
+        if ([self.delegate respondsToSelector:@selector(audioPlayerDidFinishPlaying:)])
+        {
+            [self.delegate audioPlayerDidFinishPlaying:self];
+        }
+        return;
+    }
+    
+    // 开始播放
+    player.delegate = self;
+    [player prepareToPlay];
+    [player play];
+    self.currentPlayer = player;
+}
+
+// 默认缓存路径
++ (NSString*)defaultCachePathWithURL:(NSString*)url isMP3Audio:(BOOL)isMP3Audio
+{
+    // 获取缓存目录
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+    
+    // 创建缓存路径
+    NSString *newPath  = [cachePath stringByAppendingPathComponent:@"AudioCaches"];
+    
+    NSString *localPath;
+    if (isMP3Audio)
+    {
+        localPath = [newPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.mp3", url]];
+    }
+    else
+    {
+        localPath = [newPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.amr", url]];
+    }
+    
+    return localPath;
+}
+
+// 停止播放
+- (void)stopPlaying
+{
+    if (self.currentPlayer)
+    {
+        self.currentPlayer.delegate = nil;
+        [self.currentPlayer stop];
+        self.currentPlayer = nil;
+    }
+}
 
 #pragma mark - 播放按钮
 
@@ -69,12 +172,29 @@ SingleM(AudioPlayerTool)
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
 {
     NSLog(@"音频播放完成");
+    
+    // 停止播放并销毁播放器
+    [player stop];
+    self.currentPlayer = nil;
+    
+    // 调用播放完成的委托回调
+    if ([self.delegate respondsToSelector:@selector(audioPlayerDidFinishPlaying:)])
+    {
+        [self.delegate audioPlayerDidFinishPlaying:self];
+    }
 }
 
 // 音频解码发生错误
 - (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error
 {
     NSLog(@"音频解码发生错误");
+    // 停止播放
+    [player stop];
+    // 调用播放完成的委托回调
+    if ([self.delegate respondsToSelector:@selector(audioPlayerDidFinishPlaying:)])
+    {
+        [self.delegate audioPlayerDidFinishPlaying:self];
+    }
 }
 
 #pragma mark - Getter/Setter

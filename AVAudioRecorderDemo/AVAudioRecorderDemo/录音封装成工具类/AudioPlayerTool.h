@@ -12,10 +12,43 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class AudioPlayerTool;
+
+@protocol AudioPlayerDelegate <NSObject>
+
+// 播放完成的回调
+@optional
+- (void)audioPlayerDidFinishPlaying:(AudioPlayerTool *)playerTool;
+
+@end
+
 @interface AudioPlayerTool : NSObject
 
 /** 工具类单例 */
 SingleH(AudioPlayerTool)
+
+#pragma mark - 播放器
+
+/** 播放完成回调的委托 */
+@property (weak, nonatomic) id <AudioPlayerDelegate> delegate;
+
+/** MP3 还是 AMR 音频 */
+@property (nonatomic, assign) BOOL isMP3Audio;
+
+/** 默认缓存路径 */
++ (NSString*)defaultCachePathWithURL:(NSString*)url isMP3Audio:(BOOL)isMP3Audio;
+
+/** 初始化 */
+- (instancetype)initWithDelegate:(id)delegate;
+
+/** 根据URL播放音频 */
+- (void)playAtURL:(NSString*)url isMP3Audio:(BOOL)isMP3Audio;
+
+/** 根据Path播放音频 */
+- (void)playAtPath:(NSString*)path isMP3Audio:(BOOL)isMP3Audio;
+
+/** 停止播放 */
+- (void)stopPlaying;
 
 #pragma mark - 播放按钮
 
