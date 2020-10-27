@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 录音存放的文件夹 /Library/Caches/Recorder
 #define cachesRecorderPath [NSHomeDirectory() stringByAppendingPathComponent:@"/Library/Caches/Recorder"]
 
+//#define kSampleRate 44100 // 采样率
+// #define kBitRate 96000 // 码率
+
 typedef void(^AudioSuccess)(BOOL ret);
 
 @interface AudioTool : NSObject

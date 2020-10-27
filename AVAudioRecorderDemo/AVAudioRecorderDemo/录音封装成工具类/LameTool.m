@@ -28,7 +28,7 @@ SingleM(LameTool)
 }
 
 // caf 转 mp3 ：录音完成后根据用户需要去调用转码
-+ (void)audioToMP3:(NSString *)sourcePath isDeleteSourchFile:(BOOL)isDelete withSuccessBack:(void (^)(NSString * _Nonnull))success withFailBack:(void (^)(NSString * _Nonnull))fail
+- (void)audioToMP3:(NSString *)sourcePath isDeleteSourchFile:(BOOL)isDelete withSuccessBack:(void (^)(NSString * _Nonnull))success withFailBack:(void (^)(NSString * _Nonnull))fail
 {
     NSLog(@"转换开始!!");
     

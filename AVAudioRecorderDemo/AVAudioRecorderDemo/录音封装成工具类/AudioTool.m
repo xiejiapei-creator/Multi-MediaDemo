@@ -27,6 +27,9 @@
 // 是否边录边转mp3
 @property (nonatomic, assign) BOOL isConventMp3;
 
+// 计时器
+@property (nonatomic, strong) NSTimer *timer;
+
 @end
 
 
@@ -77,16 +80,40 @@ SingleM(AudioTool)
         // 首次使用应用时如果调用record方法会询问用户是否允许使用麦克风
         [self.audioRecorder record];
         
+        // 销毁之前的计时器
+        [self.timer invalidate];
+        
+        // 创建新的计时器时刻监测录制时长
+        NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:0.33 target:self selector:@selector(autoEndRecordingWithTime) userInfo:nil repeats:YES];
+        self.timer = timer;
+        
         // 判断是否需要边录边转 MP3
         if (isConventToMp3)
         {
-            [[LameTool shareLameTool] audioRecodingToMP3:_recordPath isDeleteSourchFile:YES withSuccessBack:^(NSString * _Nonnull resultPath) {
+            [[LameTool shareLameTool] audioRecodingToMP3:_recordPath isDeleteSourchFile:NO withSuccessBack:^(NSString * _Nonnull resultPath) {
                 NSLog(@"转 MP3 成功");
                 NSLog(@"转为MP3后的路径 = %@",resultPath);
             } withFailBack:^(NSString * _Nonnull error) {
                 NSLog(@"转 MP3 失败");
             }];
         }
+    }
+}
+
+// 录音文件每3分钟保存一个文件，保存成功则录制下一段，时长可配置
+- (void)autoEndRecordingWithTime
+{
+    // 刷新音量数据
+    [self.audioRecorder updateMeters];
+    
+    // 当前录音时长
+    NSLog(@"当前录音时长：%f",self.audioRecorder.currentTime);
+    
+    // 录音文件每3分钟保存一个文件，保存成功则录制下一段，时长可配置
+    if (self.audioRecorder.currentTime >= 180)
+    {
+        // 结束录音
+        [self endRecord];
     }
 }
 
@@ -263,7 +290,7 @@ SingleM(AudioTool)
         
         // 设置采样率AVSampleRateKey：必须保证和转码设置的相同
         // 采样率越高，文件越大，质量越好，反之，文件小，质量相对差一些，但是低于普通的音频，人耳并不能明显的分辨出好坏
-        // 建议使用标准的采样率，8000、16000、22050、44100
+        // 建议使用标准的采样率，8000、16000、22050、44100(11025.0)
         [recordSettings setValue:[NSNumber numberWithFloat:11025.0] forKey:AVSampleRateKey];
         
         // 设置通道数AVNumberOfChannelsKey，用于指定记录音频的通道数。

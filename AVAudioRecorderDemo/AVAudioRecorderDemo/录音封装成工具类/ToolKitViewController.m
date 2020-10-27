@@ -200,9 +200,12 @@
 // caf 转 mp3
 -(void)pcmAudioToMP3Click
 {
+    NSString *convertPath = @"/Users/xiejiapei/Desktop/441000-96KB-NoTag/35200505324217_2890893_1603327594000_1603327774000_MP3.caf";
+    
     // 第一个参数是原音频的路径，第二个参数是转换为 MP3 后是否删除原来音频
-    [LameTool audioToMP3:[cachesRecorderPath stringByAppendingPathComponent:@"xiejiapei.caf"] isDeleteSourchFile:YES withSuccessBack:^(NSString * _Nonnull resultPath) {
-        
+    NSLog(@"文件路径：%@",convertPath);
+
+    [LameTool audioToMP3:convertPath isDeleteSourchFile:YES withSuccessBack:^(NSString * _Nonnull resultPath) {
         NSLog(@"转为MP3后的路径 = %@",resultPath);
     } withFailBack:^(NSString * _Nonnull error) {
         NSLog(@"转换失败：%@",error);

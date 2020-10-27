@@ -22,7 +22,7 @@ SingleH(LameTool)
  * @param success 成功的回调
  * @param fail 失败的回调
  */
-+(void)audioToMP3:(NSString *)sourcePath isDeleteSourchFile: (BOOL)isDelete withSuccessBack:(void(^)(NSString *resultPath))success withFailBack:(void(^)(NSString *error))fail;
+- (void)audioToMP3:(NSString *)sourcePath isDeleteSourchFile: (BOOL)isDelete withSuccessBack:(void(^)(NSString *resultPath))success withFailBack:(void(^)(NSString *error))fail;
 
 /**caf 转 mp3 : 录音的同时转码
  * @param sourcePath 需要转mp3的caf路径
@@ -30,7 +30,7 @@ SingleH(LameTool)
  * @param success 成功的回调
  * @param fail 失败的回调
  */
--(void)audioRecodingToMP3:(NSString *)sourcePath isDeleteSourchFile: (BOOL)isDelete withSuccessBack:(void(^)(NSString *resultPath))success withFailBack:(void(^)(NSString *error))fail;
+- (void)audioRecodingToMP3:(NSString *)sourcePath isDeleteSourchFile: (BOOL)isDelete withSuccessBack:(void(^)(NSString *resultPath))success withFailBack:(void(^)(NSString *error))fail;
 
 // 录音完成的调用
 - (void)sendEndRecord;
