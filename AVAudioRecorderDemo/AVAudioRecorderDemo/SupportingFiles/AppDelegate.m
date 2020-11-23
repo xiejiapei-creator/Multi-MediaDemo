@@ -7,8 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "BasicUseViewController.h"
-#import "ToolKitViewController.h"
 #import "SoundEffectViewController.h"
 #import "MusicViewController.h"
 #import "AudioSessionViewController.h"
@@ -24,7 +22,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    ToolKitViewController *rootVC = [[ToolKitViewController alloc] init];
+    FreeStreamerViewController *rootVC = [[FreeStreamerViewController alloc] init];
     UINavigationController *mainNC = [[UINavigationController alloc] initWithRootViewController:rootVC];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];

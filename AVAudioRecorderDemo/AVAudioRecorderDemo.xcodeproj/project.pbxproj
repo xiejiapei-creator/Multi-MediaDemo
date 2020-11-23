@@ -11,32 +11,7 @@
 		E90335FE24F6620400727CCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E90335FD24F6620400727CCE /* Assets.xcassets */; };
 		E903360124F6620400727CCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E90335FF24F6620400727CCE /* LaunchScreen.storyboard */; };
 		E903360424F6620400727CCE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E903360324F6620400727CCE /* main.m */; };
-		E903366A24F8B06C00727CCE /* BasicUseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E903366924F8B06C00727CCE /* BasicUseViewController.m */; };
-		E903366E24F8B0F900727CCE /* ToolKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E903366D24F8B0F900727CCE /* ToolKitViewController.m */; };
-		E903367224F8D03300727CCE /* AudioTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E903367124F8D03300727CCE /* AudioTool.m */; };
-		E903367524F8DA2800727CCE /* AudioFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E903367424F8DA2800727CCE /* AudioFileTool.m */; };
-		E903367924F8FF2100727CCE /* AudioPlayerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E903367824F8FF2100727CCE /* AudioPlayerTool.m */; };
-		E903367C24F9042F00727CCE /* AudioFilePathTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E903367B24F9042F00727CCE /* AudioFilePathTool.m */; };
-		E903368224F908C000727CCE /* LameTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E903368124F908C000727CCE /* LameTool.m */; };
-		E9110F24250B163600670540 /* 播放.png in Resources */ = {isa = PBXBuildFile; fileRef = E9110F17250B163600670540 /* 播放.png */; };
-		E9110F25250B163600670540 /* talk_sound_p3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9110F18250B163600670540 /* talk_sound_p3@2x.png */; };
-		E9110F26250B163600670540 /* talk_sound_p1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9110F19250B163600670540 /* talk_sound_p1@2x.png */; };
-		E9110F27250B163600670540 /* talk_icon_recoder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9110F1A250B163600670540 /* talk_icon_recoder@2x.png */; };
-		E9110F28250B163600670540 /* talk_icon_recordCancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9110F1B250B163600670540 /* talk_icon_recordCancel@2x.png */; };
-		E9110F29250B163600670540 /* talk_sound_p5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9110F1C250B163600670540 /* talk_sound_p5@2x.png */; };
-		E9110F2A250B163600670540 /* talk_sound_p7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9110F1D250B163600670540 /* talk_sound_p7@2x.png */; };
-		E9110F2B250B163600670540 /* talk_icon_recordCancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9110F1F250B163600670540 /* talk_icon_recordCancel@3x.png */; };
-		E9110F2C250B163600670540 /* talk_sound_p2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9110F20250B163600670540 /* talk_sound_p2@2x.png */; };
-		E9110F2D250B163600670540 /* talk_sound_p4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9110F21250B163600670540 /* talk_sound_p4@2x.png */; };
-		E9110F2F250B163600670540 /* talk_sound_p6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9110F23250B163600670540 /* talk_sound_p6@2x.png */; };
-		E9110F32250B167200670540 /* TalkingRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9110F31250B167200670540 /* TalkingRecordView.m */; };
-		E9110F45250B535D00670540 /* AudioConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = E9110F34250B535D00670540 /* AudioConverter.mm */; };
-		E9110F46250B535D00670540 /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9110F3D250B535D00670540 /* libopencore-amrwb.a */; };
-		E9110F47250B535D00670540 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9110F3E250B535D00670540 /* libopencore-amrnb.a */; };
-		E9110F48250B535D00670540 /* wav.mm in Sources */ = {isa = PBXBuildFile; fileRef = E9110F40250B535D00670540 /* wav.mm */; };
-		E9110F49250B535D00670540 /* amrFileCodec.mm in Sources */ = {isa = PBXBuildFile; fileRef = E9110F41250B535D00670540 /* amrFileCodec.mm */; };
 		E92C1A4924FD043C00417EE7 /* SoundEffectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C1A4824FD043C00417EE7 /* SoundEffectViewController.m */; };
-		E92C1A4B24FD084D00417EE7 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E92C1A4A24FD084D00417EE7 /* libmp3lame.a */; };
 		E92C1A4F24FDE2E000417EE7 /* Sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = E92C1A4E24FDE2BC00417EE7 /* Sound.caf */; };
 		E92C1A5224FDEB9A00417EE7 /* 桜道.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E92C1A5124FDEB9A00417EE7 /* 桜道.mp3 */; };
 		E92C1A5524FDEBB100417EE7 /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C1A5424FDEBB100417EE7 /* MusicViewController.m */; };
@@ -75,51 +50,8 @@
 		E903360024F6620400727CCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E903360224F6620400727CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E903360324F6620400727CCE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E903366824F8B06C00727CCE /* BasicUseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicUseViewController.h; sourceTree = "<group>"; };
-		E903366924F8B06C00727CCE /* BasicUseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicUseViewController.m; sourceTree = "<group>"; };
-		E903366C24F8B0F900727CCE /* ToolKitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolKitViewController.h; sourceTree = "<group>"; };
-		E903366D24F8B0F900727CCE /* ToolKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolKitViewController.m; sourceTree = "<group>"; };
-		E903366F24F8D00000727CCE /* Single.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Single.h; sourceTree = "<group>"; };
-		E903367024F8D03300727CCE /* AudioTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioTool.h; sourceTree = "<group>"; };
-		E903367124F8D03300727CCE /* AudioTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioTool.m; sourceTree = "<group>"; };
-		E903367324F8DA2800727CCE /* AudioFileTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioFileTool.h; sourceTree = "<group>"; };
-		E903367424F8DA2800727CCE /* AudioFileTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioFileTool.m; sourceTree = "<group>"; };
-		E903367624F8FAD800727CCE /* RecorderKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecorderKit.h; sourceTree = "<group>"; };
-		E903367724F8FF2100727CCE /* AudioPlayerTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioPlayerTool.h; sourceTree = "<group>"; };
-		E903367824F8FF2100727CCE /* AudioPlayerTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioPlayerTool.m; sourceTree = "<group>"; };
-		E903367A24F9042F00727CCE /* AudioFilePathTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioFilePathTool.h; sourceTree = "<group>"; };
-		E903367B24F9042F00727CCE /* AudioFilePathTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioFilePathTool.m; sourceTree = "<group>"; };
-		E903367F24F908A400727CCE /* lame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
-		E903368024F908C000727CCE /* LameTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LameTool.h; sourceTree = "<group>"; };
-		E903368124F908C000727CCE /* LameTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LameTool.m; sourceTree = "<group>"; };
-		E9110F17250B163600670540 /* 播放.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "播放.png"; sourceTree = "<group>"; };
-		E9110F18250B163600670540 /* talk_sound_p3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talk_sound_p3@2x.png"; sourceTree = "<group>"; };
-		E9110F19250B163600670540 /* talk_sound_p1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talk_sound_p1@2x.png"; sourceTree = "<group>"; };
-		E9110F1A250B163600670540 /* talk_icon_recoder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talk_icon_recoder@2x.png"; sourceTree = "<group>"; };
-		E9110F1B250B163600670540 /* talk_icon_recordCancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talk_icon_recordCancel@2x.png"; sourceTree = "<group>"; };
-		E9110F1C250B163600670540 /* talk_sound_p5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talk_sound_p5@2x.png"; sourceTree = "<group>"; };
-		E9110F1D250B163600670540 /* talk_sound_p7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talk_sound_p7@2x.png"; sourceTree = "<group>"; };
-		E9110F1F250B163600670540 /* talk_icon_recordCancel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talk_icon_recordCancel@3x.png"; sourceTree = "<group>"; };
-		E9110F20250B163600670540 /* talk_sound_p2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talk_sound_p2@2x.png"; sourceTree = "<group>"; };
-		E9110F21250B163600670540 /* talk_sound_p4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talk_sound_p4@2x.png"; sourceTree = "<group>"; };
-		E9110F23250B163600670540 /* talk_sound_p6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "talk_sound_p6@2x.png"; sourceTree = "<group>"; };
-		E9110F30250B167200670540 /* TalkingRecordView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TalkingRecordView.h; sourceTree = "<group>"; };
-		E9110F31250B167200670540 /* TalkingRecordView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TalkingRecordView.m; sourceTree = "<group>"; };
-		E9110F34250B535D00670540 /* AudioConverter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AudioConverter.mm; sourceTree = "<group>"; };
-		E9110F37250B535D00670540 /* if_rom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = if_rom.h; sourceTree = "<group>"; };
-		E9110F38250B535D00670540 /* dec_if.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dec_if.h; sourceTree = "<group>"; };
-		E9110F3A250B535D00670540 /* interf_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_dec.h; sourceTree = "<group>"; };
-		E9110F3B250B535D00670540 /* interf_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interf_enc.h; sourceTree = "<group>"; };
-		E9110F3D250B535D00670540 /* libopencore-amrwb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrwb.a"; sourceTree = "<group>"; };
-		E9110F3E250B535D00670540 /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
-		E9110F40250B535D00670540 /* wav.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = wav.mm; sourceTree = "<group>"; };
-		E9110F41250B535D00670540 /* amrFileCodec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = amrFileCodec.mm; sourceTree = "<group>"; };
-		E9110F42250B535D00670540 /* amrFileCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amrFileCodec.h; sourceTree = "<group>"; };
-		E9110F43250B535D00670540 /* wav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wav.h; sourceTree = "<group>"; };
-		E9110F44250B535D00670540 /* AudioConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioConverter.h; sourceTree = "<group>"; };
 		E92C1A4724FD043C00417EE7 /* SoundEffectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoundEffectViewController.h; sourceTree = "<group>"; };
 		E92C1A4824FD043C00417EE7 /* SoundEffectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundEffectViewController.m; sourceTree = "<group>"; };
-		E92C1A4A24FD084D00417EE7 /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
 		E92C1A4E24FDE2BC00417EE7 /* Sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sound.caf; sourceTree = "<group>"; };
 		E92C1A5124FDEB9A00417EE7 /* 桜道.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "桜道.mp3"; sourceTree = "<group>"; };
 		E92C1A5324FDEBB100417EE7 /* MusicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
@@ -179,12 +111,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E92C1ADF24FE523F00417EE7 /* AVFoundation.framework in Frameworks */,
-				E9110F47250B535D00670540 /* libopencore-amrnb.a in Frameworks */,
 				E92C1AE224FE525C00417EE7 /* MediaPlayer.framework in Frameworks */,
 				E92C1ADB24FE522500417EE7 /* CFNetwork.framework in Frameworks */,
 				E92C1AE324FE527100417EE7 /* libxml2.tbd in Frameworks */,
-				E92C1A4B24FD084D00417EE7 /* libmp3lame.a in Frameworks */,
-				E9110F46250B535D00670540 /* libopencore-amrwb.a in Frameworks */,
 				E92C1ADD24FE522F00417EE7 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,8 +146,6 @@
 				E92C1A5624FE16D400417EE7 /* 音频会话 */,
 				E92C1A5024FDEB8A00417EE7 /* 音乐 */,
 				E92C1A4624FD03C800417EE7 /* 音效 */,
-				E903360B24F6621F00727CCE /* 录音基本实现 */,
-				E903366B24F8B0B200727CCE /* 录音封装成工具类 */,
 				E903360A24F6620F00727CCE /* SupportingFiles */,
 				E903360224F6620400727CCE /* Info.plist */,
 			);
@@ -228,7 +155,6 @@
 		E903360A24F6620F00727CCE /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				E9110F16250B163600670540 /* TalkingRecordView */,
 				E90335F124F6620300727CCE /* AppDelegate.h */,
 				E90335F224F6620300727CCE /* AppDelegate.m */,
 				E90335FD24F6620400727CCE /* Assets.xcassets */,
@@ -236,118 +162,6 @@
 				E903360324F6620400727CCE /* main.m */,
 			);
 			path = SupportingFiles;
-			sourceTree = "<group>";
-		};
-		E903360B24F6621F00727CCE /* 录音基本实现 */ = {
-			isa = PBXGroup;
-			children = (
-				E903366824F8B06C00727CCE /* BasicUseViewController.h */,
-				E903366924F8B06C00727CCE /* BasicUseViewController.m */,
-			);
-			path = "录音基本实现";
-			sourceTree = "<group>";
-		};
-		E903366B24F8B0B200727CCE /* 录音封装成工具类 */ = {
-			isa = PBXGroup;
-			children = (
-				E9110F30250B167200670540 /* TalkingRecordView.h */,
-				E9110F31250B167200670540 /* TalkingRecordView.m */,
-				E903366C24F8B0F900727CCE /* ToolKitViewController.h */,
-				E903366D24F8B0F900727CCE /* ToolKitViewController.m */,
-				E903367024F8D03300727CCE /* AudioTool.h */,
-				E903367124F8D03300727CCE /* AudioTool.m */,
-				E903367324F8DA2800727CCE /* AudioFileTool.h */,
-				E903367424F8DA2800727CCE /* AudioFileTool.m */,
-				E903367724F8FF2100727CCE /* AudioPlayerTool.h */,
-				E903367824F8FF2100727CCE /* AudioPlayerTool.m */,
-				E903367A24F9042F00727CCE /* AudioFilePathTool.h */,
-				E903367B24F9042F00727CCE /* AudioFilePathTool.m */,
-				E903368024F908C000727CCE /* LameTool.h */,
-				E903368124F908C000727CCE /* LameTool.m */,
-				E903367624F8FAD800727CCE /* RecorderKit.h */,
-				E903366F24F8D00000727CCE /* Single.h */,
-				E903367F24F908A400727CCE /* lame.h */,
-				E92C1A4A24FD084D00417EE7 /* libmp3lame.a */,
-				E9110F33250B535D00670540 /* AmrConverter */,
-			);
-			path = "录音封装成工具类";
-			sourceTree = "<group>";
-		};
-		E9110F16250B163600670540 /* TalkingRecordView */ = {
-			isa = PBXGroup;
-			children = (
-				E9110F17250B163600670540 /* 播放.png */,
-				E9110F18250B163600670540 /* talk_sound_p3@2x.png */,
-				E9110F19250B163600670540 /* talk_sound_p1@2x.png */,
-				E9110F1A250B163600670540 /* talk_icon_recoder@2x.png */,
-				E9110F1B250B163600670540 /* talk_icon_recordCancel@2x.png */,
-				E9110F1C250B163600670540 /* talk_sound_p5@2x.png */,
-				E9110F1D250B163600670540 /* talk_sound_p7@2x.png */,
-				E9110F1F250B163600670540 /* talk_icon_recordCancel@3x.png */,
-				E9110F20250B163600670540 /* talk_sound_p2@2x.png */,
-				E9110F21250B163600670540 /* talk_sound_p4@2x.png */,
-				E9110F23250B163600670540 /* talk_sound_p6@2x.png */,
-			);
-			path = TalkingRecordView;
-			sourceTree = "<group>";
-		};
-		E9110F33250B535D00670540 /* AmrConverter */ = {
-			isa = PBXGroup;
-			children = (
-				E9110F34250B535D00670540 /* AudioConverter.mm */,
-				E9110F35250B535D00670540 /* include */,
-				E9110F3C250B535D00670540 /* lib */,
-				E9110F3F250B535D00670540 /* amrwapper */,
-				E9110F44250B535D00670540 /* AudioConverter.h */,
-			);
-			path = AmrConverter;
-			sourceTree = "<group>";
-		};
-		E9110F35250B535D00670540 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				E9110F36250B535D00670540 /* opencore-amrwb */,
-				E9110F39250B535D00670540 /* opencore-amrnb */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		E9110F36250B535D00670540 /* opencore-amrwb */ = {
-			isa = PBXGroup;
-			children = (
-				E9110F37250B535D00670540 /* if_rom.h */,
-				E9110F38250B535D00670540 /* dec_if.h */,
-			);
-			path = "opencore-amrwb";
-			sourceTree = "<group>";
-		};
-		E9110F39250B535D00670540 /* opencore-amrnb */ = {
-			isa = PBXGroup;
-			children = (
-				E9110F3A250B535D00670540 /* interf_dec.h */,
-				E9110F3B250B535D00670540 /* interf_enc.h */,
-			);
-			path = "opencore-amrnb";
-			sourceTree = "<group>";
-		};
-		E9110F3C250B535D00670540 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				E9110F3D250B535D00670540 /* libopencore-amrwb.a */,
-				E9110F3E250B535D00670540 /* libopencore-amrnb.a */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		E9110F3F250B535D00670540 /* amrwapper */ = {
-			isa = PBXGroup;
-			children = (
-				E9110F40250B535D00670540 /* wav.mm */,
-				E9110F41250B535D00670540 /* amrFileCodec.mm */,
-				E9110F42250B535D00670540 /* amrFileCodec.h */,
-				E9110F43250B535D00670540 /* wav.h */,
-			);
-			path = amrwapper;
 			sourceTree = "<group>";
 		};
 		E92C1A4624FD03C800417EE7 /* 音效 */ = {
@@ -510,21 +324,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9110F24250B163600670540 /* 播放.png in Resources */,
 				E903360124F6620400727CCE /* LaunchScreen.storyboard in Resources */,
-				E9110F26250B163600670540 /* talk_sound_p1@2x.png in Resources */,
-				E9110F2B250B163600670540 /* talk_icon_recordCancel@3x.png in Resources */,
-				E9110F2A250B163600670540 /* talk_sound_p7@2x.png in Resources */,
-				E9110F2F250B163600670540 /* talk_sound_p6@2x.png in Resources */,
 				E90335FE24F6620400727CCE /* Assets.xcassets in Resources */,
-				E9110F2D250B163600670540 /* talk_sound_p4@2x.png in Resources */,
-				E9110F27250B163600670540 /* talk_icon_recoder@2x.png in Resources */,
-				E9110F29250B163600670540 /* talk_sound_p5@2x.png in Resources */,
 				E92C1A4F24FDE2E000417EE7 /* Sound.caf in Resources */,
 				E92C1A5224FDEB9A00417EE7 /* 桜道.mp3 in Resources */,
-				E9110F28250B163600670540 /* talk_icon_recordCancel@2x.png in Resources */,
-				E9110F25250B163600670540 /* talk_sound_p3@2x.png in Resources */,
-				E9110F2C250B163600670540 /* talk_sound_p2@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,33 +344,22 @@
 				E92C1AD724FE51F400417EE7 /* FSParsePlaylistRequest.m in Sources */,
 				E92C1AD324FE51F400417EE7 /* FSXMLHttpRequest.m in Sources */,
 				E92C1A6124FE4EEE00417EE7 /* FreeStreamerViewController.m in Sources */,
-				E9110F32250B167200670540 /* TalkingRecordView.m in Sources */,
-				E903368224F908C000727CCE /* LameTool.m in Sources */,
-				E903367224F8D03300727CCE /* AudioTool.m in Sources */,
 				E92C1AD624FE51F400417EE7 /* file_stream.cpp in Sources */,
 				E92C1AC724FE51F400417EE7 /* Reachability.m in Sources */,
-				E903367C24F9042F00727CCE /* AudioFilePathTool.m in Sources */,
 				E92C1ACA24FE51F400417EE7 /* FSPlaylistItem.m in Sources */,
-				E903367924F8FF2100727CCE /* AudioPlayerTool.m in Sources */,
-				E9110F49250B535D00670540 /* amrFileCodec.mm in Sources */,
-				E9110F48250B535D00670540 /* wav.mm in Sources */,
 				E92C1AD424FE51F400417EE7 /* FSAudioStream.mm in Sources */,
 				E90335F324F6620300727CCE /* AppDelegate.m in Sources */,
 				E92C1AC924FE51F400417EE7 /* http_stream.cpp in Sources */,
-				E903366A24F8B06C00727CCE /* BasicUseViewController.m in Sources */,
 				E903360424F6620400727CCE /* main.m in Sources */,
 				E92C1AD124FE51F400417EE7 /* file_output.cpp in Sources */,
 				E92C1ACB24FE51F400417EE7 /* audio_stream.cpp in Sources */,
 				E92C1A4924FD043C00417EE7 /* SoundEffectViewController.m in Sources */,
-				E9110F45250B535D00670540 /* AudioConverter.mm in Sources */,
 				E92C1A5524FDEBB100417EE7 /* MusicViewController.m in Sources */,
 				E92C1ACE24FE51F400417EE7 /* stream_configuration.cpp in Sources */,
-				E903367524F8DA2800727CCE /* AudioFileTool.m in Sources */,
 				E92C1A5D24FE266D00417EE7 /* MusicPlayerController.m in Sources */,
 				E92C1AD224FE51F400417EE7 /* caching_stream.cpp in Sources */,
 				E92C1ACD24FE51F400417EE7 /* FSCheckContentTypeRequest.m in Sources */,
 				E92C1AD024FE51F400417EE7 /* FSAudioController.m in Sources */,
-				E903366E24F8B0F900727CCE /* ToolKitViewController.m in Sources */,
 				E92C1ACC24FE51F400417EE7 /* id3_parser.cpp in Sources */,
 				E92C1AD524FE51F400417EE7 /* audio_queue.cpp in Sources */,
 			);
