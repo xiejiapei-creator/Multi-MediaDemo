@@ -26,7 +26,7 @@
     [super viewDidLoad];
     
     // 通过这里设置当前程序是拍照还是录制视频
-    self.isVideo = YES;
+    self.isVideo = NO;
     
     // 拍照按钮
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(50, 400, 300, 80)];
@@ -85,9 +85,19 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
--(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     NSLog(@"取消");
+}
+
+#pragma mark - 私有方法
+
+// 视频保存回调
+- (void)video:(NSString *)videoPath didFinishSavingWithError:(NSError *)error contextInfo: (void *)contextInfo
+{
+    NSLog(@"视频路径：%@",videoPath);
+
+    NSLog(@"%@",error);
 }
 
 #pragma mark - Getter/Setter

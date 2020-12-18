@@ -12,8 +12,6 @@
 		E92C1B9524FF978C00417EE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E92C1B9324FF978C00417EE7 /* LaunchScreen.storyboard */; };
 		E92C1B9824FF978C00417EE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C1B9724FF978C00417EE7 /* main.m */; };
 		E92C1BA224FF984600417EE7 /* UIImagePickerControllerDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C1BA124FF984600417EE7 /* UIImagePickerControllerDemo.m */; };
-		E92C1BA624FFA74E00417EE7 /* AVFoundationDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = E92C1BA524FFA74E00417EE7 /* AVFoundationDemo.m */; };
-		E92C1BA8250091DB00417EE7 /* focusCursor.png in Resources */ = {isa = PBXBuildFile; fileRef = E92C1BA7250091DB00417EE7 /* focusCursor.png */; };
 		E9E9E55B2520246900D52CF7 /* ScanQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E9E55A2520246900D52CF7 /* ScanQRCodeViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -27,9 +25,6 @@
 		E92C1B9724FF978C00417EE7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E92C1BA024FF984600417EE7 /* UIImagePickerControllerDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIImagePickerControllerDemo.h; sourceTree = "<group>"; };
 		E92C1BA124FF984600417EE7 /* UIImagePickerControllerDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIImagePickerControllerDemo.m; sourceTree = "<group>"; };
-		E92C1BA424FFA74E00417EE7 /* AVFoundationDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVFoundationDemo.h; sourceTree = "<group>"; };
-		E92C1BA524FFA74E00417EE7 /* AVFoundationDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVFoundationDemo.m; sourceTree = "<group>"; };
-		E92C1BA7250091DB00417EE7 /* focusCursor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = focusCursor.png; sourceTree = "<group>"; };
 		E9E9E5592520246900D52CF7 /* ScanQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanQRCodeViewController.h; sourceTree = "<group>"; };
 		E9E9E55A2520246900D52CF7 /* ScanQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanQRCodeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,9 +92,6 @@
 		E92C1BA324FFA73800417EE7 /* AVFoundation */ = {
 			isa = PBXGroup;
 			children = (
-				E92C1BA424FFA74E00417EE7 /* AVFoundationDemo.h */,
-				E92C1BA524FFA74E00417EE7 /* AVFoundationDemo.m */,
-				E92C1BA7250091DB00417EE7 /* focusCursor.png */,
 			);
 			path = AVFoundation;
 			sourceTree = "<group>";
@@ -170,7 +162,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E92C1BA8250091DB00417EE7 /* focusCursor.png in Resources */,
 				E92C1B9524FF978C00417EE7 /* LaunchScreen.storyboard in Resources */,
 				E92C1B9224FF978C00417EE7 /* Assets.xcassets in Resources */,
 			);
@@ -184,7 +175,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9E9E55B2520246900D52CF7 /* ScanQRCodeViewController.m in Sources */,
-				E92C1BA624FFA74E00417EE7 /* AVFoundationDemo.m in Sources */,
 				E92C1B8724FF978B00417EE7 /* AppDelegate.m in Sources */,
 				E92C1BA224FF984600417EE7 /* UIImagePickerControllerDemo.m in Sources */,
 				E92C1B9824FF978C00417EE7 /* main.m in Sources */,
