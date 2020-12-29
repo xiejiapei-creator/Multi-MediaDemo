@@ -29,14 +29,21 @@
     NSFileHandle *fileHandele;
 }
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [self createSubview];
+}
+
 - (void)createSubview
 {
-    _tipLabel = [[UILabel alloc]initWithFrame:CGRectMake(100, 150, 200, 100)];
+    _tipLabel = [[UILabel alloc]initWithFrame:CGRectMake(150, 200, 200, 50)];
     _tipLabel.text = @"H.264硬编码";
     _tipLabel.textColor = [UIColor redColor];
     [self.view addSubview:_tipLabel];
     
-    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(200, 150, 100, 100)];
+    UIButton *button = [[UIButton alloc]initWithFrame:CGRectMake(150, 300, 100, 100)];
     [button setTitle:@"开始捕捉" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [button setBackgroundColor:[UIColor orangeColor]];
@@ -414,6 +421,30 @@ void didCompressH264(void *outputCallbackRefCon, void *sourceFrameRefCon, OSStat
     [fileHandele writeData:sps];
     [fileHandele writeData:ByteHeader];
     [fileHandele writeData:pps];
+}
+
+// 将nalu数据写入到文件
+- (void)gotEncodedData:(NSData*)data isKeyFrame:(BOOL)isKeyFrame
+{
+    NSLog(@"将nalu数据写入到文件，数据长度为：%d",(int)[data length]);
+    
+    if (fileHandele != NULL)
+    {
+        // 创建起始位
+        const char bytes[] ="\x00\x00\x00\x01";
+        
+        // 计算长度
+        size_t length = (sizeof bytes) - 1;
+        
+        // 将头字节bytes转化为NSData
+        NSData *ByteHeader = [NSData dataWithBytes:bytes length:length];
+        
+        // 写入头字节。注意在写入NSLU数据之前，先写入起始位
+        [fileHandele writeData:ByteHeader];
+        
+        // 写入H264数据到沙盒文件中
+        [fileHandele writeData:data];
+    }
 }
 
 @end
