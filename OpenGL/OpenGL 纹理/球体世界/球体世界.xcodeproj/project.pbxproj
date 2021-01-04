@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E949DC2A25A30630002088B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E949DC2925A30630002088B6 /* Assets.xcassets */; };
+		E949DC2D25A30630002088B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E949DC2B25A30630002088B6 /* Main.storyboard */; };
+		E949DC3C25A30B5C002088B6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E949DC3B25A30B5C002088B6 /* main.cpp */; };
+		E949DC4325A30C21002088B6 /* MoonLike.tga in Resources */ = {isa = PBXBuildFile; fileRef = E949DC4025A30C21002088B6 /* MoonLike.tga */; };
+		E949DC4425A30C21002088B6 /* Marslike.tga in Resources */ = {isa = PBXBuildFile; fileRef = E949DC4125A30C21002088B6 /* Marslike.tga */; };
+		E949DC4525A30C21002088B6 /* Marble.tga in Resources */ = {isa = PBXBuildFile; fileRef = E949DC4225A30C21002088B6 /* Marble.tga */; };
+		E949DC4A25A30C32002088B6 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E949DC4925A30C32002088B6 /* OpenGL.framework */; };
+		E949DC4C25A30C39002088B6 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E949DC4B25A30C39002088B6 /* GLUT.framework */; };
+		E949DC4E25A30C40002088B6 /* libGLTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E949DC4D25A30C40002088B6 /* libGLTools.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E949DC2025A30630002088B6 /* 球体世界.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "球体世界.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E949DC2925A30630002088B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E949DC2C25A30630002088B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E949DC2E25A30630002088B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E949DC3125A30630002088B6 /* ____.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "____.entitlements"; sourceTree = "<group>"; };
+		E949DC3B25A30B5C002088B6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E949DC4025A30C21002088B6 /* MoonLike.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoonLike.tga; sourceTree = "<group>"; };
+		E949DC4125A30C21002088B6 /* Marslike.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = Marslike.tga; sourceTree = "<group>"; };
+		E949DC4225A30C21002088B6 /* Marble.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = Marble.tga; sourceTree = "<group>"; };
+		E949DC4925A30C32002088B6 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		E949DC4B25A30C39002088B6 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		E949DC4D25A30C40002088B6 /* libGLTools.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGLTools.a; sourceTree = "<group>"; };
+		E949DC5025A30C47002088B6 /* GLBatchBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBatchBase.h; sourceTree = "<group>"; };
+		E949DC5125A30C47002088B6 /* math3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = math3d.h; sourceTree = "<group>"; };
+		E949DC5225A30C47002088B6 /* GLTriangleBatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLTriangleBatch.h; sourceTree = "<group>"; };
+		E949DC5325A30C47002088B6 /* GLBatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLBatch.h; sourceTree = "<group>"; };
+		E949DC5425A30C47002088B6 /* GLMatrixStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLMatrixStack.h; sourceTree = "<group>"; };
+		E949DC5525A30C47002088B6 /* GLFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLFrame.h; sourceTree = "<group>"; };
+		E949DC5625A30C47002088B6 /* GLFrustum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLFrustum.h; sourceTree = "<group>"; };
+		E949DC5725A30C47002088B6 /* GLGeometryTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLGeometryTransform.h; sourceTree = "<group>"; };
+		E949DC5825A30C47002088B6 /* GLShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLShaderManager.h; sourceTree = "<group>"; };
+		E949DC5925A30C47002088B6 /* StopWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopWatch.h; sourceTree = "<group>"; };
+		E949DC5B25A30C47002088B6 /* glxew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glxew.h; sourceTree = "<group>"; };
+		E949DC5C25A30C47002088B6 /* wglew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wglew.h; sourceTree = "<group>"; };
+		E949DC5D25A30C47002088B6 /* glew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glew.h; sourceTree = "<group>"; };
+		E949DC5E25A30C47002088B6 /* GLTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLTools.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E949DC1D25A30630002088B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E949DC4E25A30C40002088B6 /* libGLTools.a in Frameworks */,
+				E949DC4C25A30C39002088B6 /* GLUT.framework in Frameworks */,
+				E949DC4A25A30C32002088B6 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E949DC1725A30630002088B6 = {
+			isa = PBXGroup;
+			children = (
+				E949DC2225A30630002088B6 /* 球体世界 */,
+				E949DC2125A30630002088B6 /* Products */,
+				E949DC4825A30C32002088B6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E949DC2125A30630002088B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E949DC2025A30630002088B6 /* 球体世界.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E949DC2225A30630002088B6 /* 球体世界 */ = {
+			isa = PBXGroup;
+			children = (
+				E949DC3B25A30B5C002088B6 /* main.cpp */,
+				E949DC4F25A30C47002088B6 /* include */,
+				E949DC3F25A30C19002088B6 /* Image */,
+				E949DC3825A30638002088B6 /* SupportingFiles */,
+				E949DC2E25A30630002088B6 /* Info.plist */,
+			);
+			path = "球体世界";
+			sourceTree = "<group>";
+		};
+		E949DC3825A30638002088B6 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				E949DC2925A30630002088B6 /* Assets.xcassets */,
+				E949DC2B25A30630002088B6 /* Main.storyboard */,
+				E949DC3125A30630002088B6 /* ____.entitlements */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		E949DC3F25A30C19002088B6 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				E949DC4225A30C21002088B6 /* Marble.tga */,
+				E949DC4125A30C21002088B6 /* Marslike.tga */,
+				E949DC4025A30C21002088B6 /* MoonLike.tga */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		E949DC4825A30C32002088B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E949DC4D25A30C40002088B6 /* libGLTools.a */,
+				E949DC4B25A30C39002088B6 /* GLUT.framework */,
+				E949DC4925A30C32002088B6 /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E949DC4F25A30C47002088B6 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				E949DC5025A30C47002088B6 /* GLBatchBase.h */,
+				E949DC5125A30C47002088B6 /* math3d.h */,
+				E949DC5225A30C47002088B6 /* GLTriangleBatch.h */,
+				E949DC5325A30C47002088B6 /* GLBatch.h */,
+				E949DC5425A30C47002088B6 /* GLMatrixStack.h */,
+				E949DC5525A30C47002088B6 /* GLFrame.h */,
+				E949DC5625A30C47002088B6 /* GLFrustum.h */,
+				E949DC5725A30C47002088B6 /* GLGeometryTransform.h */,
+				E949DC5825A30C47002088B6 /* GLShaderManager.h */,
+				E949DC5925A30C47002088B6 /* StopWatch.h */,
+				E949DC5A25A30C47002088B6 /* GL */,
+				E949DC5E25A30C47002088B6 /* GLTools.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		E949DC5A25A30C47002088B6 /* GL */ = {
+			isa = PBXGroup;
+			children = (
+				E949DC5B25A30C47002088B6 /* glxew.h */,
+				E949DC5C25A30C47002088B6 /* wglew.h */,
+				E949DC5D25A30C47002088B6 /* glew.h */,
+			);
+			path = GL;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E949DC1F25A30630002088B6 /* 球体世界 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E949DC3425A30630002088B6 /* Build configuration list for PBXNativeTarget "球体世界" */;
+			buildPhases = (
+				E949DC1C25A30630002088B6 /* Sources */,
+				E949DC1D25A30630002088B6 /* Frameworks */,
+				E949DC1E25A30630002088B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "球体世界";
+			productName = "球体世界";
+			productReference = E949DC2025A30630002088B6 /* 球体世界.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E949DC1825A30630002088B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					E949DC1F25A30630002088B6 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = E949DC1B25A30630002088B6 /* Build configuration list for PBXProject "球体世界" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E949DC1725A30630002088B6;
+			productRefGroup = E949DC2125A30630002088B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E949DC1F25A30630002088B6 /* 球体世界 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E949DC1E25A30630002088B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E949DC2A25A30630002088B6 /* Assets.xcassets in Resources */,
+				E949DC2D25A30630002088B6 /* Main.storyboard in Resources */,
+				E949DC4425A30C21002088B6 /* Marslike.tga in Resources */,
+				E949DC4325A30C21002088B6 /* MoonLike.tga in Resources */,
+				E949DC4525A30C21002088B6 /* Marble.tga in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E949DC1C25A30630002088B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E949DC3C25A30B5C002088B6 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E949DC2B25A30630002088B6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E949DC2C25A30630002088B6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E949DC3225A30630002088B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E949DC3325A30630002088B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E949DC3525A30630002088B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "球体世界/____.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "球体世界/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xiejiapei.----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E949DC3625A30630002088B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "球体世界/____.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "球体世界/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.xiejiapei.----";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E949DC1B25A30630002088B6 /* Build configuration list for PBXProject "球体世界" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E949DC3225A30630002088B6 /* Debug */,
+				E949DC3325A30630002088B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E949DC3425A30630002088B6 /* Build configuration list for PBXNativeTarget "球体世界" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E949DC3525A30630002088B6 /* Debug */,
+				E949DC3625A30630002088B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E949DC1825A30630002088B6 /* Project object */;
+}
