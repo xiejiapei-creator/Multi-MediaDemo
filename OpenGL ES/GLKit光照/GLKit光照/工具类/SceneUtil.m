@@ -45,7 +45,7 @@ GLKVector3 SceneTriangleFaceNormal(const SceneTriangle triangle)
     //vectorB =  v2 - v0
     GLKVector3 vectorB = GLKVector3Subtract(triangle.vertices[2].position,
                                             triangle.vertices[0].position);
-    //通过 向量A和向量B的叉积求出平面法向量，单元化后返回
+    //通过向量A和向量B的叉积求出平面法向量，单元化后返回
     return SceneVector3UnitNormal(vectorA,vectorB);
 }
 
