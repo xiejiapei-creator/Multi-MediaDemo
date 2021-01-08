@@ -7,11 +7,13 @@ uniform float Time;
 
 const float PI = 3.1415926;
 
-float rand(float n) {
+float rand(float n)
+{
     return fract(sin(n) * 43758.5453123);
 }
 
-void main (void) {
+void main (void)
+{
     float maxJitter = 0.06;
     float duration = 0.3;
     float colorROffset = 0.01;

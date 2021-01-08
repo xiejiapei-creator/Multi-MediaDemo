@@ -5,7 +5,8 @@ varying vec2 TextureCoordsVarying;
 
 uniform float Time;
 
-void main (void) {
+void main (void)
+{
     float duration = 0.7;
     float maxAlpha = 0.4;
     float maxScale = 1.8;

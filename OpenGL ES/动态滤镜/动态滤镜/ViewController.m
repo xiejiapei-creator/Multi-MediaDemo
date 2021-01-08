@@ -99,7 +99,7 @@ typedef struct
     filerBar.delegate = self;
     [self.view addSubview:filerBar];
     
-    NSArray *dataSource = @[@"原图",@"缩放滤镜"];
+    NSArray *dataSource = @[@"原图",@"缩放滤镜",@"灵魂出窍",@"抖动滤镜",@"撕裂滤镜",@"闪白滤镜"];
     filerBar.itemList = dataSource;
 }
 
@@ -125,13 +125,13 @@ typedef struct
     }
     else if(index == 4)
     {
-        [self setupShineWhiteShaderProgram];
+        [self setupGitchShaderProgram];
     }
     else if(index == 5)
     {
-        [self setupGitchShaderProgram];
+        [self setupShineWhiteShaderProgram];
     }
-   
+
     // 重新开始滤镜动画
     [self startFilerAnimation];
     
@@ -380,26 +380,24 @@ typedef struct
 - (void)setupSoulOutShaderProgram
 {
     [self setupShaderProgramWithName:@"SoulOut"];
-    
 }
 
 // 抖动滤镜着色器程序
 - (void)setupShakeShaderProgram
 {
     [self setupShaderProgramWithName:@"Shake"];
-
-}
-
-// 闪白滤镜着色器程序
-- (void)setupShineWhiteShaderProgram
-{
-    [self setupShaderProgramWithName:@"ShineWhite"];
 }
 
 // 毛刺滤镜着色器程序
 - (void)setupGitchShaderProgram
 {
     [self setupShaderProgramWithName:@"Glitch"];
+}
+
+// 闪白滤镜着色器程序
+- (void)setupShineWhiteShaderProgram
+{
+    [self setupShaderProgramWithName:@"ShineWhite"];
 }
 
 // 初始化着色器程序
@@ -507,4 +505,6 @@ typedef struct
 }
 
 @end
+
+
 
