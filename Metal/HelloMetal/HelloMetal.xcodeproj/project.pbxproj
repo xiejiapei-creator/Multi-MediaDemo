@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E90C2CA525ABDE8B00D55844 /* LoadTgaImageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = E90C2CA425ABDE8B00D55844 /* LoadTgaImageRenderer.m */; };
+		E90C2CAB25ABE17F00D55844 /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = E90C2CAA25ABE17F00D55844 /* Image.m */; };
+		E90C2CAE25ABE9D600D55844 /* Image.tga in Resources */ = {isa = PBXBuildFile; fileRef = E90C2CA825ABE10800D55844 /* Image.tga */; };
+		E90C2CBA25ABF54000D55844 /* LoadPngImageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = E90C2CB925ABF54000D55844 /* LoadPngImageRenderer.m */; };
+		E90C2CC125ABF64500D55844 /* luckcoffee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E90C2CC025ABF64500D55844 /* luckcoffee.jpg */; };
 		E96A0AC825AAB1C8006E6613 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E96A0AC725AAB1C8006E6613 /* AppDelegate.m */; };
 		E96A0ACB25AAB1C8006E6613 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E96A0ACA25AAB1C8006E6613 /* SceneDelegate.m */; };
 		E96A0ACE25AAB1C8006E6613 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E96A0ACD25AAB1C8006E6613 /* ViewController.m */; };
@@ -21,6 +26,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E90C2CA325ABDE8B00D55844 /* LoadTgaImageRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadTgaImageRenderer.h; sourceTree = "<group>"; };
+		E90C2CA425ABDE8B00D55844 /* LoadTgaImageRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadTgaImageRenderer.m; sourceTree = "<group>"; };
+		E90C2CA825ABE10800D55844 /* Image.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = Image.tga; sourceTree = "<group>"; };
+		E90C2CA925ABE17F00D55844 /* Image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		E90C2CAA25ABE17F00D55844 /* Image.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
+		E90C2CB825ABF54000D55844 /* LoadPngImageRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadPngImageRenderer.h; sourceTree = "<group>"; };
+		E90C2CB925ABF54000D55844 /* LoadPngImageRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadPngImageRenderer.m; sourceTree = "<group>"; };
+		E90C2CC025ABF64500D55844 /* luckcoffee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = luckcoffee.jpg; sourceTree = "<group>"; };
 		E96A0AC325AAB1C8006E6613 /* HelloMetal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloMetal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96A0AC625AAB1C8006E6613 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E96A0AC725AAB1C8006E6613 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +67,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E90C2CA225ABDE6200D55844 /* LoadTgaImage */ = {
+			isa = PBXGroup;
+			children = (
+				E90C2CA325ABDE8B00D55844 /* LoadTgaImageRenderer.h */,
+				E90C2CA425ABDE8B00D55844 /* LoadTgaImageRenderer.m */,
+				E90C2CA925ABE17F00D55844 /* Image.h */,
+				E90C2CAA25ABE17F00D55844 /* Image.m */,
+			);
+			path = LoadTgaImage;
+			sourceTree = "<group>";
+		};
+		E90C2CB725ABF52600D55844 /* LoadPngImage */ = {
+			isa = PBXGroup;
+			children = (
+				E90C2CB825ABF54000D55844 /* LoadPngImageRenderer.h */,
+				E90C2CB925ABF54000D55844 /* LoadPngImageRenderer.m */,
+			);
+			path = LoadPngImage;
+			sourceTree = "<group>";
+		};
 		E96A0ABA25AAB1C8006E6613 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +106,8 @@
 		E96A0AC525AAB1C8006E6613 /* HelloMetal */ = {
 			isa = PBXGroup;
 			children = (
+				E90C2CB725ABF52600D55844 /* LoadPngImage */,
+				E90C2CA225ABDE6200D55844 /* LoadTgaImage */,
 				E9B3628A25AB3E45007B6B66 /* MTLBuffer */,
 				E96A0AEE25AAF447006E6613 /* Triangle */,
 				E96A0AE325AAB56D006E6613 /* Render */,
@@ -87,6 +122,8 @@
 		E96A0AE025AAB1D1006E6613 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				E90C2CC025ABF64500D55844 /* luckcoffee.jpg */,
+				E90C2CA825ABE10800D55844 /* Image.tga */,
 				E96A0AD225AAB1CB006E6613 /* Assets.xcassets */,
 				E96A0AC625AAB1C8006E6613 /* AppDelegate.h */,
 				E96A0AC725AAB1C8006E6613 /* AppDelegate.m */,
@@ -184,9 +221,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E90C2CC125ABF64500D55844 /* luckcoffee.jpg in Resources */,
 				E96A0AD625AAB1CB006E6613 /* LaunchScreen.storyboard in Resources */,
 				E96A0AD325AAB1CB006E6613 /* Assets.xcassets in Resources */,
 				E96A0AD125AAB1C8006E6613 /* Main.storyboard in Resources */,
+				E90C2CAE25ABE9D600D55844 /* Image.tga in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,9 +241,12 @@
 				E9B3628D25AB3EA9007B6B66 /* LargeDataRenderer.m in Sources */,
 				E9B3628425AAFE57007B6B66 /* TriangleRenderer.m in Sources */,
 				E96A0AC825AAB1C8006E6613 /* AppDelegate.m in Sources */,
+				E90C2CA525ABDE8B00D55844 /* LoadTgaImageRenderer.m in Sources */,
 				E96A0AD925AAB1CB006E6613 /* main.m in Sources */,
 				E96A0AE625AAB581006E6613 /* Renderer.m in Sources */,
 				E96A0ACB25AAB1C8006E6613 /* SceneDelegate.m in Sources */,
+				E90C2CAB25ABE17F00D55844 /* Image.m in Sources */,
+				E90C2CBA25ABF54000D55844 /* LoadPngImageRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,8 @@
 #import "Renderer.h"
 #import "TriangleRenderer.h"
 #import "LargeDataRenderer.h"
+#import "LoadTgaImageRenderer.h"
+#import "LoadPngImageRenderer.h"
 #import <MetalKit/MetalKit.h>
 
 @interface ViewController ()
@@ -16,7 +18,9 @@
 @property (nonatomic, strong) MTKView *mtkView;// 视图
 //@property (nonatomic, strong) Renderer *renderer;// 渲染器
 //@property (nonatomic, strong) TriangleRenderer *renderer;// 三角形渲染器
-@property (nonatomic, strong) LargeDataRenderer *renderer;// 顶点数据达到上限渲染器
+//@property (nonatomic, strong) LargeDataRenderer *renderer;// 顶点数据达到上限渲染器
+@property (nonatomic, strong) LoadTgaImageRenderer *renderer;// 加载TGA文件渲染器
+//@property (nonatomic, strong) LoadPngImageRenderer *renderer;// 加载PNG文件渲染器
 
 @end
 
@@ -40,7 +44,7 @@
     }
     
     // 4. 创建渲染器
-    self.renderer = [[LargeDataRenderer alloc] initWithMetalKitView:self.mtkView];
+    self.renderer = [[LoadTgaImageRenderer alloc] initWithMetalKitView:self.mtkView];
     
     // 5.判断renderer是否创建成功
     if (!self.renderer)
