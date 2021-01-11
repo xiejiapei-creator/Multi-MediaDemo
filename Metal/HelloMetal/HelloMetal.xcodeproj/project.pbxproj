@@ -12,6 +12,7 @@
 		E90C2CAE25ABE9D600D55844 /* Image.tga in Resources */ = {isa = PBXBuildFile; fileRef = E90C2CA825ABE10800D55844 /* Image.tga */; };
 		E90C2CBA25ABF54000D55844 /* LoadPngImageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = E90C2CB925ABF54000D55844 /* LoadPngImageRenderer.m */; };
 		E90C2CC125ABF64500D55844 /* luckcoffee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E90C2CC025ABF64500D55844 /* luckcoffee.jpg */; };
+		E90C2CCB25AC1C5C00D55844 /* Founcition.metal in Sources */ = {isa = PBXBuildFile; fileRef = E90C2CCA25AC1C5C00D55844 /* Founcition.metal */; };
 		E96A0AC825AAB1C8006E6613 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E96A0AC725AAB1C8006E6613 /* AppDelegate.m */; };
 		E96A0ACB25AAB1C8006E6613 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E96A0ACA25AAB1C8006E6613 /* SceneDelegate.m */; };
 		E96A0ACE25AAB1C8006E6613 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E96A0ACD25AAB1C8006E6613 /* ViewController.m */; };
@@ -34,6 +35,7 @@
 		E90C2CB825ABF54000D55844 /* LoadPngImageRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadPngImageRenderer.h; sourceTree = "<group>"; };
 		E90C2CB925ABF54000D55844 /* LoadPngImageRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadPngImageRenderer.m; sourceTree = "<group>"; };
 		E90C2CC025ABF64500D55844 /* luckcoffee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = luckcoffee.jpg; sourceTree = "<group>"; };
+		E90C2CCA25AC1C5C00D55844 /* Founcition.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Founcition.metal; sourceTree = "<group>"; };
 		E96A0AC325AAB1C8006E6613 /* HelloMetal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloMetal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E96A0AC625AAB1C8006E6613 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E96A0AC725AAB1C8006E6613 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 			path = LoadPngImage;
 			sourceTree = "<group>";
 		};
+		E90C2CC925AC1C0900D55844 /* MetalShadingLauguage */ = {
+			isa = PBXGroup;
+			children = (
+				E90C2CCA25AC1C5C00D55844 /* Founcition.metal */,
+			);
+			path = MetalShadingLauguage;
+			sourceTree = "<group>";
+		};
 		E96A0ABA25AAB1C8006E6613 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +116,7 @@
 		E96A0AC525AAB1C8006E6613 /* HelloMetal */ = {
 			isa = PBXGroup;
 			children = (
+				E90C2CC925AC1C0900D55844 /* MetalShadingLauguage */,
 				E90C2CB725ABF52600D55844 /* LoadPngImage */,
 				E90C2CA225ABDE6200D55844 /* LoadTgaImage */,
 				E9B3628A25AB3E45007B6B66 /* MTLBuffer */,
@@ -247,6 +258,7 @@
 				E96A0ACB25AAB1C8006E6613 /* SceneDelegate.m in Sources */,
 				E90C2CAB25ABE17F00D55844 /* Image.m in Sources */,
 				E90C2CBA25ABF54000D55844 /* LoadPngImageRenderer.m in Sources */,
+				E90C2CCB25AC1C5C00D55844 /* Founcition.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
