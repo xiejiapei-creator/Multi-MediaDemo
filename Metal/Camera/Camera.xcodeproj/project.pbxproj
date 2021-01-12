@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E90C2D1025AD475800D55844 /* AssetReader.m in Sources */ = {isa = PBXBuildFile; fileRef = E90C2D0F25AD475800D55844 /* AssetReader.m */; };
+		E90C2D1825AD528E00D55844 /* RendererCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E90C2D1725AD528E00D55844 /* RendererCameraViewController.m */; };
+		E90C2D1D25AD861A00D55844 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = E90C2D1C25AD861A00D55844 /* Shaders.metal */; };
+		E90C2D2125AD8AD900D55844 /* girl.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E90C2D2025AD8AD900D55844 /* girl.mp4 */; };
 		E9DB413E25AD1BE0008DE9C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DB413D25AD1BE0008DE9C2 /* AppDelegate.m */; };
 		E9DB414125AD1BE0008DE9C2 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DB414025AD1BE0008DE9C2 /* SceneDelegate.m */; };
 		E9DB414425AD1BE0008DE9C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DB414325AD1BE0008DE9C2 /* ViewController.m */; };
@@ -17,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E90C2D0E25AD475800D55844 /* AssetReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssetReader.h; sourceTree = "<group>"; };
+		E90C2D0F25AD475800D55844 /* AssetReader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssetReader.m; sourceTree = "<group>"; };
+		E90C2D1625AD528E00D55844 /* RendererCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RendererCameraViewController.h; sourceTree = "<group>"; };
+		E90C2D1725AD528E00D55844 /* RendererCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RendererCameraViewController.m; sourceTree = "<group>"; };
+		E90C2D1A25AD737D00D55844 /* ShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShaderTypes.h; sourceTree = "<group>"; };
+		E90C2D1C25AD861A00D55844 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		E90C2D2025AD8AD900D55844 /* girl.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = girl.mp4; sourceTree = "<group>"; };
 		E9DB413925AD1BE0008DE9C2 /* Camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Camera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9DB413C25AD1BE0008DE9C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E9DB413D25AD1BE0008DE9C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,8 +72,14 @@
 		E9DB413B25AD1BE0008DE9C2 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
+				E90C2D1C25AD861A00D55844 /* Shaders.metal */,
+				E90C2D1A25AD737D00D55844 /* ShaderTypes.h */,
 				E9DB414225AD1BE0008DE9C2 /* ViewController.h */,
 				E9DB414325AD1BE0008DE9C2 /* ViewController.m */,
+				E90C2D1625AD528E00D55844 /* RendererCameraViewController.h */,
+				E90C2D1725AD528E00D55844 /* RendererCameraViewController.m */,
+				E90C2D0E25AD475800D55844 /* AssetReader.h */,
+				E90C2D0F25AD475800D55844 /* AssetReader.m */,
 				E9DB415625AD1BE8008DE9C2 /* SupportingFiles */,
 				E9DB414D25AD1BE3008DE9C2 /* Info.plist */,
 			);
@@ -72,6 +89,7 @@
 		E9DB415625AD1BE8008DE9C2 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				E90C2D2025AD8AD900D55844 /* girl.mp4 */,
 				E9DB413C25AD1BE0008DE9C2 /* AppDelegate.h */,
 				E9DB413D25AD1BE0008DE9C2 /* AppDelegate.m */,
 				E9DB413F25AD1BE0008DE9C2 /* SceneDelegate.h */,
@@ -141,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9DB414C25AD1BE3008DE9C2 /* LaunchScreen.storyboard in Resources */,
+				E90C2D2125AD8AD900D55844 /* girl.mp4 in Resources */,
 				E9DB414925AD1BE3008DE9C2 /* Assets.xcassets in Resources */,
 				E9DB414725AD1BE0008DE9C2 /* Main.storyboard in Resources */,
 			);
@@ -153,7 +172,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E90C2D1025AD475800D55844 /* AssetReader.m in Sources */,
+				E90C2D1D25AD861A00D55844 /* Shaders.metal in Sources */,
 				E9DB414425AD1BE0008DE9C2 /* ViewController.m in Sources */,
+				E90C2D1825AD528E00D55844 /* RendererCameraViewController.m in Sources */,
 				E9DB413E25AD1BE0008DE9C2 /* AppDelegate.m in Sources */,
 				E9DB414F25AD1BE3008DE9C2 /* main.m in Sources */,
 				E9DB414125AD1BE0008DE9C2 /* SceneDelegate.m in Sources */,

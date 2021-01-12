@@ -6,6 +6,7 @@
 //
 
 #import "ViewController.h"
+#import "ShaderTypes.h"
 #import <MetalKit/MetalKit.h>
 #import <GLKit/GLKit.h>
 #import <AVFoundation/AVFoundation.h>
