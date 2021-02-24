@@ -1,0 +1,4 @@
+target 'UseCabbage' do
+  use_frameworks!
+  pod 'VFCabbage'
+end
